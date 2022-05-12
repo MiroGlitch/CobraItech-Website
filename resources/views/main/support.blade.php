@@ -23,17 +23,18 @@
                                 </small>
                             </div>
 
-                            <form action="" method="post" role="form" class="php-email-form">
+                            <form action="{{route('send.support')}}" method="post" role="form" class="php-email-form">
+                                @csrf
                                 <div class="row">
                                     <div class="col-md-6 form-group mb-3">
                                         <p style="font-weight: bold">Name</p>
                                         <input type="text" name="name" class="form-control" id="name"
-                                            placeholder="Your Name" required>
+                                            placeholder="Your Name">
                                     </div>
                                     <div class="col-md-6 form-group mb-3">
                                         <p style="font-weight: bold">Email</p>
                                         <input type="email" class="form-control" name="email" id="email"
-                                            placeholder="Your Email" required>
+                                            placeholder="Your Email">
                                     </div>
                                 </div>
 
@@ -41,14 +42,14 @@
                                     <div class="col-md-6 form-group mb-3">
                                         <p style="font-weight: bold">Contact Number</p>
                                         <input type="text" class="form-control" name="number" id="number"
-                                            placeholder="Your contact number" required>
+                                            placeholder="Your contact number">
                                     </div>
                                     <div class="col-md-6 form-group mb-3">
                                         <p style="font-weight: bold">Category</p>
-                                        <select class="form-select" name="category" required>
-                                            <option selected disabled>Choose a Category</option>
-                                            <option>Hardware</option>
-                                            <option>Software</option>
+                                        <select class="form-select" name="category" id="category">
+                                            <option selected disabled value="">Choose a Category</option>
+                                            <option value="Hardware">Hardware</option>
+                                            <option value="Software">Software</option>
                                         </select>
                                     </div>
                                 </div>
@@ -56,11 +57,11 @@
 
                                 <div class="form-group mb-3">
                                     <p style="font-weight: bold">Issue</p>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Your Issue"></textarea>
+                                    <textarea class="form-control" name="issue" id="issue" rows="3" placeholder="Your Issue"></textarea>
                                 </div>
 
                                 <div class="d-grid gap-2 col-6 mx-auto">
-                                    <button class="btn text-white" style="background-color: #12519E;">Submit</button>
+                                    <button class="btn text-white" style="background-color: #12519E;" id="support-btn">Submit</button>
                                 </div>
                             </form>
                         </div>

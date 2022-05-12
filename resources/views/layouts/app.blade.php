@@ -137,28 +137,28 @@
                     <div class="col-lg-2 col-md-6 footer-links">
                         <h4>Useful Links</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="about.html">About Us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact Us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="partners-clients.html">Partners &
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ url('/') }}">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('company') }}">About Us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('contactus') }}">Contact Us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('partners') }}">Partners &
                                     Clients</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="careers.html">Careers</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="support.html">Support</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('careers') }}">Careers</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('support') }}">Support</a></li>
                         </ul>
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Our Services</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="services.html">Computer Repair</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="services.html">Help Desk Support</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="services.html">Computer Programming</a>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Computer Repair</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Help Desk Support</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Computer Programming</a>
                             </li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="services.html">Database Management</a>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Database Management</a>
                             </li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="services.html">Website Development</a>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Website Development</a>
                             </li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="services.html">Mobile App Development</a>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Mobile App Development</a>
                             </li>
                         </ul>
                     </div>
@@ -192,7 +192,6 @@
     <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/waypoints/noframework.waypoints.js') }}"></script>
-    <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
 
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>

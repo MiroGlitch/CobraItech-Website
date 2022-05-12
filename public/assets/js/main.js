@@ -1,12 +1,41 @@
-
+//Form Validation for Careers Page
 $('#career-btn').on('click', function () {
   let name = $('#name').val();
   let email = $('#email').val();
-
+  let job = document.getElementById("job");
   let resume = $('#fileCV').val();
+  let cover = $('#cover').val();
 
-  if (name == '' || email == '' || resume == '') {
+  if (name == '' || email == '' || resume == '' || job.value === '' || cover == '') {
     swal('Error!', 'Please fill up the fields!', 'error');
+    return false;
+  }
+});
+
+//Form Validation for Support Page
+$('#support-btn').on('click', function () {
+  let name = $('#name').val();
+  let email = $('#email').val();
+  let number = $('#number').val();
+  let category = document.getElementById("category");
+  let issue = $('#issue').val();
+
+  if (name == '' || email == '' || issue == '' || number == '' || category.value === '') {
+    swal('Error!', 'Please fill up the fields!', 'error');
+    return false;
+  }
+});
+
+//Form Validation for Contact Page
+$('#contact-btn').on('click', function () {
+  let name = $('#name').val();
+  let email = $('#email').val();
+  let subject = $('#subject').val();
+  let message = $('#message').val();
+
+  if (name == '' || email == '' || subject == '' || message == '') {
+    swal('Error!', 'Please fill up the fields!', 'error');
+    return false;
   }
 });
 

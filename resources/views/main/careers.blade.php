@@ -19,7 +19,8 @@
                 <div class="col-lg-8 offset-md-2">
                     <div class="card shadow-sm bg-body rounded border-0">
                         <div class="card-body">
-                            <form action="" method="post" role="form" class="php-email-form">
+                            <form action="{{route('send.career')}}" method="post" role="form" class="php-email-form" enctype="multipart/form-data">
+                                @csrf
                                 <div class="row">
                                     <div class="col-md-6 form-group">
                                         <p style="font-weight: bold">Name</p>
@@ -35,16 +36,20 @@
                                 <div class="form-group mt-3">
                                     <p style="font-weight: bold">Job Category</p>
                                     <select class="form-select" name="job" id="job">
-                                        <option>Select Job Category</option>
-                                        <option>Consultant</option>
-                                        <option>Data Scientist</option>
-                                        <option>Designer</option>
-                                        <option>Developer</option>
+                                        <option selected disabled value="">Select Job Category</option>
+                                        <option value="Consultant">Consultant</option>
+                                        <option value="Data Scientist">Data Scientist</option>
+                                        <option value="Designer">Designer</option>
+                                        <option value="Developer">Developer</option>
                                     </select>
                                 </div>
                                 <div class="form-group mt-3">
+                                    <p style="font-weight: bold">Cover Letter</p>
+                                    <textarea class="form-control" name="cover" id="cover" rows="3" placeholder="Message"></textarea>
+                                </div>
+                                <div class="form-group mt-3">
                                     <label for="formFile" class="form-label" style="font-weight: bold">Resume/CV</label>
-                                    <input class="form-control" type="file" id="fileCV">
+                                    <input class="form-control" type="file" name="cv" id="fileCV">
                                 </div>
                                 <div><br></div>
                                 <div class="d-grid gap-2 col-6 mx-auto">

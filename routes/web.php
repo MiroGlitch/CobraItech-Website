@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PagesController as PageDirectory;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +26,10 @@ Route::get('/partners', [PageDirectory::class, 'partnersPage'])->name('partners'
 Route::get('/careers', [PageDirectory::class, 'careersPage'])->name('careers');
 Route::get('/support', [PageDirectory::class, 'supportPage'])->name('support');
 Route::get('/contactus', [PageDirectory::class, 'contactusPage'])->name('contactus');
+
+Route::post('/send-contact', [ContactController::class, 'sendContact'])->name('send.contact');
+Route::post('/send-support', [ContactController::class, 'sendSupport'])->name('send.support');
+Route::post('/send-career', [ContactController::class, 'sendCareer'])->name('send.career');
 
 
 
