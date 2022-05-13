@@ -23,6 +23,9 @@ $('#support-btn').on('click', function () {
   if (name == '' || email == '' || issue == '' || number == '' || category.value === '') {
     swal('Error!', 'Please fill up the fields!', 'error');
     return false;
+  } else if (isNaN(number)) {
+    swal('Error!', 'Please enter a valid contact number!', 'error');
+    return false;
   }
 });
 
@@ -38,6 +41,21 @@ $('#contact-btn').on('click', function () {
     return false;
   }
 });
+
+function fileValidation() {
+  var fileInput = document.getElementById('fileCV');
+    
+  var filePath = fileInput.value;
+
+  // Allowing file type
+  var allowedExtensions = /(\.doc|\.docx|\.pdf)$/i;
+    
+  if (!allowedExtensions.exec(filePath)) {
+    swal('Error!', 'Only upload .doc/.docx/.pdf files!', 'error');
+    fileInput.value = '';
+    return false;
+  }
+}
 
 
 (function () {

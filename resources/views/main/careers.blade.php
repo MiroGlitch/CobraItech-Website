@@ -49,7 +49,7 @@
                                 </div>
                                 <div class="form-group mt-3">
                                     <label for="formFile" class="form-label" style="font-weight: bold">Resume/CV</label>
-                                    <input class="form-control" type="file" name="cv" id="fileCV">
+                                    <input class="form-control" type="file" name="cv" id="fileCV" onchange="fileValidation()">
                                 </div>
                                 <div><br></div>
                                 <div class="d-grid gap-2 col-6 mx-auto">
