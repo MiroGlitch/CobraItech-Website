@@ -18,16 +18,18 @@
     <title></title>
 </head>
 
-<body style="background-color: #F5F8FA; font-family:'Open Sans', 'sans-serif';">
+<body style="background-color: #F5F8FA;">
 
     <header>
-        <div style="display: flex; justify-content:center">
-            <div class="logo">
-                <img src="{{ asset('assets/img/logo-name.png') }}" alt="logo" srcset="" width="350">
-            </div>
+
+        <div class=" logo" style="">
+            <img src="{{ asset('assets/img/logo-name.png') }}" alt="logo" srcset="" width="350" style="  display: block;
+                margin-left: auto;
+                margin-right: auto;">
         </div>
+
         <div
-            style="display:flex; align-items:center; justify-content:center; padding:1.5rem; background-image: linear-gradient(rgb(18, 81, 158, 0.8), rgb(84, 161, 207), rgb(150, 206, 223));">
+            style="margin-right:auto; margin-left:auto; padding:1.5rem; background-image: linear-gradient(rgb(18, 81, 158, 0.8), rgb(84, 161, 207), rgb(150, 206, 223));">
             <div style="color:#fff; text-transform:uppercase; font-size:2.5rem; font-weight:500; text-align:center">
                 @yield('title')</div>
         </div>
