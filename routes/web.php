@@ -31,7 +31,9 @@ Route::post('/send-contact', [ContactController::class, 'sendContact'])->name('s
 Route::post('/send-support', [ContactController::class, 'sendSupport'])->name('send.support');
 Route::post('/send-career', [ContactController::class, 'sendCareer'])->name('send.career');
 
-
+Route::get('/template', function () {
+    return view('supportemail');
+}); // for testing only
 
 Auth::routes();
 
