@@ -23,9 +23,8 @@
     <header>
 
         <div class=" logo" style="">
-            <img src="{{ asset('assets/img/logo-name.png') }}" alt="logo" srcset="" width="350" style="  display: block;
-                margin-left: auto;
-                margin-right: auto;">
+            <img src="{{ asset('assets/img/logo-name.png') }}" alt="logo" srcset="" width="350"
+                style="  display: block; margin-left: auto; margin-right: auto;">
         </div>
 
         <div
@@ -35,8 +34,7 @@
         </div>
     </header>
 
-    <div
-        style="margin-top:-15px; padding: 0px 48px; margin-bottom: 48px; width: 75%; margin-right:auto; margin-left:auto">
+    <div style="padding:48px; margin-bottom: 48px; width: 60%; margin-right:auto; margin-left:auto">
         <div class="card p-3"
             style=" padding: 1.5rem; border: 1px solid rgba(0,0,0,.125);background-color: #fff;border-radius: 0.25rem;">
             <div class="card-body">

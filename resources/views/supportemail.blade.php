@@ -13,7 +13,7 @@
             <ul class="list-group list-group-flush" style="list-style:none; padding-inline-start: 20px;">
                 <li class="list-group-item" style="margin-bottom: 16px">
                     <div class=" me-auto">
-                        <div style="font-weight:700; font-size: 16px;">Name</div>
+                        <div style="font-weight:700; font-size: 16px; text-transform:capitalize;">Name</div>
                         Content for list item
                     </div>
                 </li>
