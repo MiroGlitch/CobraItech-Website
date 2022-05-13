@@ -2,52 +2,50 @@
 @section('title', 'Customer Support Inquiry')
 
 @section('content')
-    <p class=" fw-bold">Hello,</p>
+    <p class=" fw-bold" style="font-weight: 700;">Hello,</p>
     <p class="card-text">I have an issue that you may be able to assist me with. If you have the time, I
         could use your help to provide solution with regards to my concern. I have provided my details
         and inquiry below. </p>
 
     <div class="row mt-4">
         <div class="col-md-6 mb-5">
-            <h5 class="text-center fw-bold">Customer Details</h5>
-            <ol class="list-group list-group-flush">
-                <li class="list-group-item">
+            <h3 style="font-weight: 700;">Customer Details</h3>
+            <ul class="list-group list-group-flush" style="list-style:none; padding-inline-start: 20px;">
+                <li class="list-group-item" style="margin-bottom: 16px">
                     <div class=" me-auto">
-                        <div class="fw-bold">Name</div>
+                        <div style="font-weight:700; font-size: 16px;">Name</div>
                         Content for list item
                     </div>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item" style="margin-bottom: 16px">
                     <div class=" me-auto">
-                        <div class="fw-bold">Email</div>
+                        <div style="font-weight:700; font-size: 16px;">Email</div>
                         Content for list item
                     </div>
                 </li>
 
                 <li class="list-group-item">
                     <div class=" me-auto">
-                        <div class="fw-bold">Contact
+                        <div style="font-weight:700; font-size: 16px;">Contact
                             Number
                         </div>
                         Content for list item
                     </div>
                 </li>
-            </ol>
+            </ul>
         </div>
         <div class="col-md-6 ">
-            <h5 class="text-center fw-bold">Customer Inquiry</h5>
-            <ol class="list-group list-group-flush">
-                <li class="list-group-item">
+            <h3 style="font-weight: 700;">Customer Inquiry</h3>
+            <ul class="list-group list-group-flush" style="list-style:none; padding-inline-start: 20px;">
+                <li class="list-group-item" style="margin-bottom: 16px">
                     <div class=" me-auto">
-                        <div class="fw-bold">Category</div>
+                        <div style="font-weight:700; font-size: 16px;">Category</div>
                         Content for list item
                     </div>
                 </li>
-
-                <li class="list-group-item">
-                    <div class="me-auto" style="text-align: justify">
-                        <div class="fw-bold">Inquiry
-                        </div>
+                <li class="list-group-item" style="margin-bottom: 16px">
+                    <div class=" me-auto" style="text-align: justify">
+                        <div style="font-weight:700; font-size: 16px;">Inquiry</div>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint vero expedita
                         voluptas ad tempora officiis itaque dolorem facere ipsam nihil. Dignissimos nobis ipsa ullam
                         distinctio quas accusamus incidunt recusandae placeat. Lorem ipsum dolor sit amet
@@ -56,7 +54,7 @@
                         voluptatum, eius iste iure beatae.
                     </div>
                 </li>
-            </ol>
+            </ul>
         </div>
     </div>
 @endsection

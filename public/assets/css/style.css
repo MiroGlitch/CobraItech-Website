@@ -1720,11 +1720,3 @@ section {
 #footer .credits a:hover {
   color: white;
 }
-
-/*--------------------------------------------------------------
-# Email Template
---------------------------------------------------------------*/
-
-.header-email-bg {
-  background-image: linear-gradient(rgb(18, 81, 158, 0.8), rgb(84, 161, 207), rgb(150, 206, 223));
-}

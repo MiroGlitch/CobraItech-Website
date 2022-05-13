@@ -8,32 +8,35 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <!--
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
 
-    <!-- Template Main CSS File -->
+     Template Main CSS File
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-
+ -->
     <title></title>
 </head>
 
-<body style="background-color: #F5F8FA;">
+<body style="background-color: #F5F8FA; font-family:'Open Sans', 'sans-serif';">
 
     <header>
-        <div class="d-flex justify-content-center">
+        <div style="display: flex; justify-content:center">
             <div class="logo">
-                <img src="{{ asset('assets/img/logo-name.png') }}" alt="logo" srcset="" class="img-fluid"
-                    height="350" width="350">
+                <img src="{{ asset('assets/img/logo-name.png') }}" alt="logo" srcset="" width="350">
             </div>
         </div>
-        <div class="container-fluid d-flex align-items-center justify-content-center p-4 header-email-bg">
-            <h1 class="text-white text-uppercase">@yield('title')</h1>
+        <div
+            style="display:flex; align-items:center; justify-content:center; padding:1.5rem; background-image: linear-gradient(rgb(18, 81, 158, 0.8), rgb(84, 161, 207), rgb(150, 206, 223));">
+            <div style="color:#fff; text-transform:uppercase; font-size:2.5rem; font-weight:500; text-align:center">
+                @yield('title')</div>
         </div>
     </header>
 
-    <div class="container px-5 mb-5 " style="margin-top:-15px">
-        <div class="card p-3">
+    <div
+        style="margin-top:-15px; padding: 0px 48px; margin-bottom: 48px; width: 75%; margin-right:auto; margin-left:auto">
+        <div class="card p-3"
+            style=" padding: 1.5rem; border: 1px solid rgba(0,0,0,.125);background-color: #fff;border-radius: 0.25rem;">
             <div class="card-body">
                 @yield('content')
             </div>
