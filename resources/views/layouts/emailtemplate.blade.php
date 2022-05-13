@@ -23,7 +23,7 @@
     <header>
 
         <div class=" logo" style="">
-            <img src="{{ asset('assets/img/logo-name.png') }}" alt="logo" srcset="" width="350"
+            <img src="{{ $message->embed('assets/img/logo-name.png') }}" alt="logo" srcset="" width="350"
                 style="  display: block; margin-left: auto; margin-right: auto;">
         </div>
 

@@ -14,13 +14,13 @@
                 <li class="list-group-item" style="margin-bottom: 16px">
                     <div class=" me-auto">
                         <div style="font-weight:700; font-size: 16px; text-transform:capitalize;">Name</div>
-                        Content for list item
+                        {{$data['name']}}
                     </div>
                 </li>
                 <li class="list-group-item" style="margin-bottom: 16px">
                     <div class=" me-auto">
                         <div style="font-weight:700; font-size: 16px;">Email</div>
-                        Content for list item
+                        {{$data['email']}}
                     </div>
                 </li>
 
@@ -29,7 +29,7 @@
                         <div style="font-weight:700; font-size: 16px;">Contact
                             Number
                         </div>
-                        Content for list item
+                        {{$data['number']}}
                     </div>
                 </li>
             </ul>
@@ -40,18 +40,13 @@
                 <li class="list-group-item" style="margin-bottom: 16px">
                     <div class=" me-auto">
                         <div style="font-weight:700; font-size: 16px;">Category</div>
-                        Content for list item
+                        {{$data['category']}}
                     </div>
                 </li>
                 <li class="list-group-item" style="margin-bottom: 16px">
                     <div class=" me-auto" style="text-align: justify">
                         <div style="font-weight:700; font-size: 16px;">Inquiry</div>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint vero expedita
-                        voluptas ad tempora officiis itaque dolorem facere ipsam nihil. Dignissimos nobis ipsa ullam
-                        distinctio quas accusamus incidunt recusandae placeat. Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Minus dolorem quos aliquam reiciendis debitis omnis architecto
-                        saepe fuga. Optio exercitationem deleniti laudantium! Esse non praesentium
-                        voluptatum, eius iste iure beatae.
+                        <pre style="font-family: Arial, sans-serif;">{{$data['issue']}}</pre>
                     </div>
                 </li>
             </ul>

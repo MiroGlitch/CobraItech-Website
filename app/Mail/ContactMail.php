@@ -30,7 +30,8 @@ class ContactMail extends Mailable
     {
         return $this->view('contactemail')
                     ->subject($this->data['subject'])
-                    ->from('marketplacebefit@gmail.com', 'BeFit')
+                    ->from('marketplacebefit@gmail.com', 'System')
+                    ->replyTo($this->data['email'], $this->data['name'])
                     ->with('data', $this->data);
     }
 }

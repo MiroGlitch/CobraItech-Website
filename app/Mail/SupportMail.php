@@ -29,7 +29,7 @@ class SupportMail extends Mailable
     public function build()
     {
         return $this->view('supportemail')
-                    ->subject($this->data['category'].' - '.$this->data['name'].' - '.$this->data['number'])
+                    ->subject('Support - '.$this->data['category'])
                     ->from('marketplacebefit@gmail.com', 'System')
                     ->replyTo($this->data['email'], $this->data['name'])
                     ->with('data', $this->data);
