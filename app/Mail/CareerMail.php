@@ -28,11 +28,11 @@ class CareerMail extends Mailable
      */
     public function build()
     {
-        return $this->view('careeremail')
-                    ->subject($this->data['job'].' - '.$this->data['name'])
-                    ->from('marketplacebefit@gmail.com', 'System')
-                    ->attach($this->data['cv'])
-                    ->replyTo($this->data['email'], $this->data['name'])
-                    ->with('data', $this->data);
+        return $this->view('mails.careeremail')
+            ->subject($this->data['job'] . ' - ' . $this->data['name'])
+            ->from('emailtestercorp@gmail.com', 'System')
+            ->attach($this->data['cv'])
+            ->replyTo($this->data['email'], $this->data['name'])
+            ->with('data', $this->data);
     }
 }

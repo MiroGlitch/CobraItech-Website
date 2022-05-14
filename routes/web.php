@@ -32,7 +32,7 @@ Route::post('/send-support', [ContactController::class, 'sendSupport'])->name('s
 Route::post('/send-career', [ContactController::class, 'sendCareer'])->name('send.career');
 
 Route::get('/template', function () {
-    return view('contactemail');
+    return view('mails.admincareeremail');
 }); // for testing only
 
 Auth::routes();

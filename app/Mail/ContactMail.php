@@ -28,10 +28,10 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        return $this->view('contactemail')
-                    ->subject($this->data['subject'])
-                    ->from('marketplacebefit@gmail.com', 'System')
-                    ->replyTo($this->data['email'], $this->data['name'])
-                    ->with('data', $this->data);
+        return $this->view('mails.contactemail')
+            ->subject($this->data['subject'])
+            ->from('emailtestercorp@gmail.com', 'System')
+            ->replyTo($this->data['email'], $this->data['name'])
+            ->with('data', $this->data);
     }
 }
