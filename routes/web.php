@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PagesController as PageDirectory;
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
@@ -30,6 +31,10 @@ Route::get('/contactus', [PageDirectory::class, 'contactusPage'])->name('contact
 Route::post('/send-contact', [ContactController::class, 'sendContact'])->name('send.contact');
 Route::post('/send-support', [ContactController::class, 'sendSupport'])->name('send.support');
 Route::post('/send-career', [ContactController::class, 'sendCareer'])->name('send.career');
+
+Route::get('/career-summary', [AdminController::class, 'careerSummaryPage'])->name('career.summary');
+Route::get('/support-summary', [AdminController::class, 'supportSummaryPage'])->name('support.summary');
+Route::get('/contact-summary', [AdminController::class, 'contactSummaryPage'])->name('contact.summary');
 
 Route::get('/template', function () {
     return view('mails.admincareeremail');
