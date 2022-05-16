@@ -80,9 +80,8 @@
                 <div class="container-fluid">
                     <button class="btn" id="sidebarToggle"><i
                             class="fa-solid fa-bars text-primary"></i></button>
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">{{ Auth::user()->name }}</a>
+                    <div class="dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }}</div>
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
