@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class SupportMail extends Mailable
+class AdminSupportMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -28,9 +28,10 @@ class SupportMail extends Mailable
      */
     public function build()
     {
-        return $this->view('mails.supportemail')
-            ->subject('Customer Support Form Summary')
+        return $this->view('mails.adminsupport')
+            ->subject('Support - ' . $this->data['category'])
             ->from('emailtestercorp@gmail.com', 'System')
+            ->replyTo($this->data['email'], $this->data['name'])
             ->with('data', $this->data);
     }
 }

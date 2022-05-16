@@ -16,7 +16,7 @@
 
                 <p
                     style=" font-size: 16px; margin-top:15px; color: #6c757d; font-weight:400; margin-right:auto; margin-left:auto; text-align:justify;">
-                    Hi, {{ $data['name'] }} ! <br><br> Thank you for applying to our company. We are always seeking for
+                    Hi, {{ $data['name'] }}! <br><br> Thank you for applying to our company. We are always seeking for
                     new ideas and talent and
                     we're interested on how will you able to contribute your skills to our company. We will be reviewing
                     your application first and contact you
