@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Support;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -13,7 +15,13 @@ class AdminController extends Controller
 
     public function supportSummaryPage()
     {
-        return view('modules.supportsummary');
+        $supports = DB::table('supports')
+            ->latest()
+            ->get();
+
+        return view('modules.supportsummary', [
+            'supports' => $supports
+        ]);
     }
 
     public function contactSummaryPage()

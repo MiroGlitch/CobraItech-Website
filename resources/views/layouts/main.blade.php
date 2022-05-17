@@ -34,38 +34,39 @@
     <div class="d-flex" id="wrapper">
         <!-- Vertical Navbar -->
         <div class="border-end" id="sidebar-wrapper">
-            <div class="sidebar-heading shadow-sm" style="background-color: #212B36;">
+            <div class="sidebar-heading shadow-sm" style="background-color: #12519E;">
                 <img src="{{ asset('assets/img/logo-name-white.png') }}" alt="" class="img-fluid p-2">
             </div>
             <div class="list-group list-group-flush" id="main-menu">
                 <a href="{{ route('home') }}"
-                    class="list-group-item list-group-item-action list-group-item-light p-3 list-group-item-bg"><i
+                    class="list-nav-link p-3 list-item-bg border-0 {{ Route::is('home') ? 'active' : '' }}"><i
                         class="fa-solid fa-gauge-high me-3"></i>Dashboard</a>
-                <a href="#sub-menu"
-                    class="list-group-item list-group-item-action list-group-item-light p-3 list-group-item-bg"
-                    data-bs-toggle="collapse" data-parent="#main-menu"> <i class="fa-solid fa-bookmark me-3"></i>Summary
-                    Forms <span class="caret"><i class="fa-solid fa-angle-down ms-5 fa-sm"></i></span></a>
+                <a href="#sub-menu" class="list-nav-link p-3 list-item-bg border-0" data-bs-toggle="collapse"
+                    data-parent="#main-menu"> <i class="fa-solid fa-bookmark me-3"></i>Summary
+                    Forms
+                    <span class="caret"><i class="fa-solid fa-angle-down ms-3 fa-sm"></i></span></a>
 
-                <div class="collapse list-group-level" id="sub-menu">
+                <div class="collapse list-group list-group-level" id="sub-menu">
+                    <a href="{{ route('career.summary') }}"
+                        class="list-item-bg list-nav-link ms-3 px-4 py-2 border-0 d-flex justify-content-between align-items-center {{ Route::is('career.summary') ? 'active' : '' }}"
+                        data-parent="#sub-menu">
+                        Job Applications
+                        <span class="badge bg-white text-dark rounded-pill">14</span>
+                    </a>
+                    <a href="{{ route('support.summary') }}"
+                        class="list-item-bg list-nav-link ms-3 px-4 py-2 border-0 d-flex justify-content-between align-items-center {{ Route::is('support.summary') ? 'active' : '' }}"
+                        data-parent="#sub-menu">
+                        Customer Support
+                        <span class="badge bg-white text-dark rounded-pill">2</span>
+                    </a>
+                    <a href="{{ route('contact.summary') }}"
+                        class="list-item-bg list-nav-link ms-3 px-4 py-2 border-0 d-flex justify-content-between align-items-center {{ Route::is('contact.summary') ? 'active' : '' }}"
+                        data-parent="#sub-menu">
+                        Inquiries
+                        <span class="badge bg-white text-dark rounded-pill">1</span>
+                    </a>
                     <ul class="list-group">
-                        <a href="{{ route('career.summary') }}"
-                            class="list-group-item d-flex justify-content-between align-items-center"
-                            data-parent="#sub-menu">
-                            Job Applications
-                            <span class="badge bg-primary rounded-pill">14</span>
-                        </a>
-                        <a href="{{ route('support.summary') }}"
-                            class="list-group-item d-flex justify-content-between align-items-center"
-                            data-parent="#sub-menu">
-                            Customer Support
-                            <span class="badge bg-primary rounded-pill">2</span>
-                        </a>
-                        <a href="{{ route('contact.summary') }}"
-                            class="list-group-item d-flex justify-content-between align-items-center"
-                            data-parent="#sub-menu">
-                            Inquiries
-                            <span class="badge bg-primary rounded-pill">1</span>
-                        </a>
+
                     </ul>
 
                 </div>

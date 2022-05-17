@@ -15,6 +15,7 @@ class Support extends Model
         'email',
         'number',
         'category',
-        'issue'
+        'issue',
+        'status'
     ];
 }

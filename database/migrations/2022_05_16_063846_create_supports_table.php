@@ -20,6 +20,7 @@ class CreateSupportsTable extends Migration
             $table->string('number');
             $table->string('category');
             $table->text('issue');
+            $table->boolean('status');
             $table->timestamps();
         });
     }

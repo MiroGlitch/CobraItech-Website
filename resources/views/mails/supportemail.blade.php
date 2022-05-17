@@ -18,7 +18,7 @@
                     style=" font-size: 16px; margin-top:15px; color: #6c757d; font-weight:400; margin-right:auto; margin-left:auto; text-align:justify;">
                     Hi, {{ $data['name'] }}! <br><br> Thank you for contacting us. Our team is working diligently to
                     assist you with your request. This is what we have received.
-                    Please refer to the contact form summary below.</p>
+                    Please refer to the customer support form summary below.</p>
             </td>
         </tr>
         <tr>

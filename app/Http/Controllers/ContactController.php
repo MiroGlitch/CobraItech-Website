@@ -60,6 +60,7 @@ class ContactController extends Controller
         $supports->number = $req->number;
         $supports->category = $req->category;
         $supports->issue = $req->issue;
+        $supports->status = 0;
 
         Mail::to($data['email'])->send(new SupportMail($data));
         Mail::to('emailtestercorp@gmail.com')->send(new AdminSupportMail($data));
