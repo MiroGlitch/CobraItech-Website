@@ -147,7 +147,7 @@
                         <div class="swiper-slide"><a href="https://www.adb.org/" target="_blank"><img
                                     src="{{ asset('assets/img/clients-partners/pc-7.webp') }}" class="img-fluid"
                                     alt=""></a></div>
-                        <div class="swiper-slide"><a href="https://www.wellsfargo.com/" target="_blank"><img
+                        <div class="swiper-slide"><a href="https://www.dswd.gov.ph/" target="_blank"><img
                                     src="{{ asset('assets/img/clients-partners/pc-8.webp') }}" class="img-fluid"
                                     alt=""></a></div>
                         <div class="swiper-slide"><a href="https://www.worldbank.org/en/home" target="_blank"><img
@@ -159,6 +159,14 @@
                         </div>
                         <div class="swiper-slide"><a href="https://www.ibm.com/ph-en" target="_blank"><img
                                     src="{{ asset('assets/img/clients-partners/pc-11.webp') }}" class="img-fluid"
+                                    alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a href="https://www.dti.gov.ph/" target="_blank"><img
+                                    src="{{ asset('assets/img/clients-partners/pc-12.webp') }}" class="img-fluid"
+                                    alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a href="https://mmda.gov.ph/" target="_blank"><img
+                                    src="{{ asset('assets/img/clients-partners/pc-13.webp') }}" class="img-fluid"
                                     alt=""></a>
                         </div>
                     </div>
