@@ -35,12 +35,13 @@ class ContactController extends Controller
         $contacts->email = $req->email;
         $contacts->subject = $req->subject;
         $contacts->message = $req->message;
+        $contacts->status = 0;
 
         Mail::to($data['email'])->send(new ContactMail($data));
         Mail::to('emailtestercorp@gmail.com')->send(new AdminContactMail($data));
 
         $contacts->save();
-        return back();
+        return back()->with('success','Your inquiry has been submitted!');
     }
 
     public function sendSupport(Request $req)
@@ -66,7 +67,7 @@ class ContactController extends Controller
         Mail::to('emailtestercorp@gmail.com')->send(new AdminSupportMail($data));
 
         $supports->save();
-        return back();
+        return back()->with('success','Your inquiry has been submitted!');
     }
 
     public function sendCareer(Request $req)
@@ -99,11 +100,12 @@ class ContactController extends Controller
         $careers->job = $req->job;
         $careers->cover = $req->cover;
         $careers->cv = $name;
+        $careers->status = 0;
 
         Mail::to($data['email'])->send(new CareerMail($data));
         Mail::to('emailtestercorp@gmail.com')->send(new AdminCareerMail($data));
 
         $careers->save();
-        return back();
+        return back()->with('success','Your job application has been submitted!');
     }
 }

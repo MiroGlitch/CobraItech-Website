@@ -21,24 +21,30 @@
                         </thead>
 
                         <tbody>
+                        @foreach ($contacts as $contact)
                             <tr>
-                                <td>asd</td>
-                                <td>asd</td>
-                                <td>asd</td>
-                                <td>asd</td>
+                                <td>{{ \Carbon\Carbon::parse($contact->created_at)->diffForHumans() }}</td>
+                                <td>{{ $contact->name }}</td>
+                                <td>{{ $contact->email }}</td>
+                                <td>{{ $contact->subject }}</td>
                                 <td>
+                                @if ($contact->status == 0)
                                     <span class="badge bg-danger">Not yet assisted</span>
+                                @else
                                     <span class="badge bg-success">Assisted</span>
+                                @endif
                                 </td>
                                 <td>
                                     <!-- data-bs-target="#id{$support->id}" === id in modal -->
                                     <button class="btn-circle btn-sm bg-primary" data-bs-toggle="modal"
                                         data-bs-target="#viewModal"> <i class="fas fa-eye text-white"></i></button>
-
-                                    <button class="btn-circle btn-sm bg-success"> <i
+                                @if ($contact->status == 0)
+                                    <a href="activate-contact/{{ $contact->id }}" style="text-decoration: none;" class="btn-circle btn-sm bg-success"> <i
                                             class="fas fa-check text-white"></i></button>
-                                    <button class="btn-circle btn-sm bg-warning"> <i
-                                            class="fas fa-times text-white"></i></button>
+                                @else
+                                    <a href="deactivate-contact/{{ $contact->id }}" style="text-decoration: none;" class="btn-circle btn-sm bg-warning"> <i
+                                            class="fas fa-times text-white"></i></a>
+                                @endif
                                 </td>
 
                             </tr>
@@ -58,28 +64,29 @@
                                             <div class="container">
                                                 <div class="row mb-3">
                                                     <div class="col-3"> <strong>ID</strong></div>
-                                                    <div class="col-9"></div>
+                                                    <div class="col-9">{{ $contact->id }}</div>
                                                 </div>
                                                 <div class="row mb-3">
                                                     <div class="col-3"> <strong>Date</strong></div>
-                                                    <div class="col-9"></div>
+                                                    <div class="col-9">{{ date('M d, Y \a\t h:i A'), strtoTime($contact->created_at) }}</div>
                                                 </div>
                                                 <div class="row mb-3">
                                                     <div class="col-3"> <strong>Name</strong></div>
-                                                    <div class="col-9"></div>
+                                                    <div class="col-9">{{ $contact->name }}</div>
                                                 </div>
                                                 <div class="row mb-3">
                                                     <div class="col-3"> <strong>Email</strong></div>
-                                                    <div class="col-9"></div>
+                                                    <div class="col-9">{{ $contact->email }}</div>
                                                 </div>
                                                 <div class="row mb-3">
                                                     <div class="col-3"> <strong>Subject</strong></div>
-                                                    <div class="col-9"></div>
+                                                    <div class="col-9">{{ $contact->subject }}</div>
                                                 </div>
 
                                                 <div class="row mb-3">
                                                     <div class="col-3"> <strong>Message</strong></div>
                                                     <div class="col-9" style="text-align: justify">
+                                                        {{ $contact->message }}
                                                     </div>
                                                 </div>
                                             </div>
@@ -88,7 +95,7 @@
                                 </div>
                             </div>
                             <!--End of Modal -->
-
+                        @endforeach
                         </tbody>
                     </table>
                 </div>

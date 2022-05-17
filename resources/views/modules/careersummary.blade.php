@@ -21,23 +21,30 @@
                         </thead>
 
                         <tbody>
+                        @foreach ($careers as $career)
                             <tr>
-                                <td>asd</td>
-                                <td>asd</td>
-                                <td>asd</td>
-                                <td>asd</td>
-                                <td> <span class="badge bg-danger">Not yet assisted</span>
+                                <td>{{ \Carbon\Carbon::parse($career->created_at)->diffForHumans() }}</td>
+                                <td>{{ $career->name }}</td>
+                                <td>{{ $career->email }}</td>
+                                <td>{{ $career->job }}</td>
+                                <td>
+                                @if ($career->status == 0)
+                                    <span class="badge bg-danger">Not yet assisted</span>
+                                @else
                                     <span class="badge bg-success">Assisted</span>
+                                @endif
                                 </td>
                                 <td>
                                     <!-- data-bs-target="#id{$support->id}" === id in modal -->
                                     <button class="btn-circle btn-sm bg-primary" data-bs-toggle="modal"
                                         data-bs-target="#viewModal"> <i class="fas fa-eye text-white"></i></button>
-
-                                    <button class="btn-circle btn-sm bg-success"> <i
-                                            class="fas fa-check text-white"></i></button>
-                                    <button class="btn-circle btn-sm bg-warning"> <i
-                                            class="fas fa-times text-white"></i></button>
+                                @if ($career->status == 0)
+                                    <a href="activate-career/{{ $career->id }}" style="text-decoration: none;" class="btn-circle btn-sm bg-success"> <i
+                                            class="fas fa-check text-white"></i></a>
+                                @else
+                                    <a href="deactivate-career/{{ $career->id }}" style="text-decoration: none;" class="btn-circle btn-sm bg-warning"> <i
+                                            class="fas fa-times text-white"></i></a>
+                                @endif
                                 </td>
 
                             </tr>
@@ -56,37 +63,35 @@
                                             <div class="container">
                                                 <div class="row mb-3">
                                                     <div class="col-3"> <strong>ID</strong></div>
-                                                    <div class="col-9"></div>
+                                                    <div class="col-9">{{ $career->id }}</div>
                                                 </div>
                                                 <div class="row mb-3">
                                                     <div class="col-3"> <strong>Date</strong></div>
-                                                    <div class="col-9">
-
-                                                    </div>
+                                                    <div class="col-9">{{ date('M d, Y \a\t h:i A'), strtoTime($career->created_at) }}</div>
                                                 </div>
                                                 <div class="row mb-3">
                                                     <div class="col-3"> <strong>Name</strong></div>
-                                                    <div class="col-9"></div>
+                                                    <div class="col-9">{{ $career->name }}</div>
                                                 </div>
                                                 <div class="row mb-3">
                                                     <div class="col-3"> <strong>Email</strong></div>
-                                                    <div class="col-9"></div>
+                                                    <div class="col-9">{{ $career->email }}</div>
                                                 </div>
                                                 <div class="row mb-3">
-                                                    <div class="col-3"> <strong>Subject</strong></div>
-                                                    <div class="col-9"></div>
+                                                    <div class="col-3"> <strong>Position</strong></div>
+                                                    <div class="col-9">{{ $career->job }}</div>
                                                 </div>
 
                                                 <div class="row mb-3">
                                                     <div class="col-3"> <strong>Message</strong></div>
-                                                    <div class="col-9" style="text-align: justify">
-                                                    </div>
+                                                    <div class="col-9" style="text-align: justify">{{ $career->cover }}</div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div> <!-- End of Modal -->
+                        @endforeach
                         </tbody>
 
                     </table>

@@ -41,10 +41,10 @@
                                             data-bs-target="#id{{ $support->id }}"> <i
                                                 class="fas fa-eye text-white"></i></button>
                                         @if ($support->status == 0)
-                                            <button class="btn-circle btn-sm bg-success"> <i
+                                            <a href="activate-support/{{ $support->id }}" style="text-decoration: none;" class="btn-circle btn-sm bg-success"> <i
                                                     class="fas fa-check text-white"></i></button>
                                         @else
-                                            <button class="btn-circle btn-sm bg-warning"> <i
+                                            <a href="deactivate-support/{{ $support->id }}" style="text-decoration: none;" class="btn-circle btn-sm bg-warning"> <i
                                                     class="fas fa-times text-white"></i></button>
                                         @endif
 

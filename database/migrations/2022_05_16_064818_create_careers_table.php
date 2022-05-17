@@ -20,6 +20,7 @@ class CreateCareersTable extends Migration
             $table->string('job');
             $table->text('cover');
             $table->string('cv');
+            $table->boolean('status');
             $table->timestamps();
         });
     }

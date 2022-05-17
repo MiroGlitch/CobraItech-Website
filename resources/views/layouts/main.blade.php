@@ -51,19 +51,19 @@
                         class="list-item-bg list-nav-link ms-3 px-4 py-2 border-0 d-flex justify-content-between align-items-center {{ Route::is('career.summary') ? 'active' : '' }}"
                         data-parent="#sub-menu">
                         Job Applications
-                        <span class="badge bg-white text-dark rounded-pill">14</span>
+                        <span class="badge bg-white text-dark rounded-pill">{{ $notAssistedCareers }}</span>
                     </a>
                     <a href="{{ route('support.summary') }}"
                         class="list-item-bg list-nav-link ms-3 px-4 py-2 border-0 d-flex justify-content-between align-items-center {{ Route::is('support.summary') ? 'active' : '' }}"
                         data-parent="#sub-menu">
                         Customer Support
-                        <span class="badge bg-white text-dark rounded-pill">2</span>
+                        <span class="badge bg-white text-dark rounded-pill">{{ $notAssistedSupports }}</span>
                     </a>
                     <a href="{{ route('contact.summary') }}"
                         class="list-item-bg list-nav-link ms-3 px-4 py-2 border-0 d-flex justify-content-between align-items-center {{ Route::is('contact.summary') ? 'active' : '' }}"
                         data-parent="#sub-menu">
                         Inquiries
-                        <span class="badge bg-white text-dark rounded-pill">1</span>
+                        <span class="badge bg-white text-dark rounded-pill">{{ $notAssistedContacts }}</span>
                     </a>
                     <ul class="list-group">
 

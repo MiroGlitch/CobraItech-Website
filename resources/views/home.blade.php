@@ -11,7 +11,7 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col me-2">
                                 <div class="mb-1 d-card-heading">Job Applications</div>
-                                <div class="mb-0 d-card-subheading">80</div>
+                                <div class="mb-0 d-card-subheading">{{ $countCareers }}</div>
                             </div>
                             <div class="col-auto d-card-icon"><i class="fas fa-briefcase fa-2x"></i></div>
                         </div>
@@ -25,7 +25,7 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col me-2">
                                 <div class="mb-1 d-card-heading">Customer Support</div>
-                                <div class="mb-0 d-card-subheading">80</div>
+                                <div class="mb-0 d-card-subheading">{{ $countSupports }}</div>
                             </div>
                             <div class="col-auto d-card-icon"><i class="fas fa-cog fa-2x"></i></div>
                         </div>
@@ -40,7 +40,7 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col me-2">
                                 <div class="mb-1 d-card-heading">Inquiries</div>
-                                <div class="mb-0 d-card-subheading">80</div>
+                                <div class="mb-0 d-card-subheading">{{ $countContacts }}</div>
                             </div>
                             <div class="col-auto d-card-icon"><i class="fas fa-info-circle fa-2x"></i></div>
                         </div>

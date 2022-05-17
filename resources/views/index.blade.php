@@ -316,6 +316,12 @@
                                 frameborder="0" allowfullscreen></iframe>
                         </div>
 
+                        @if ($message = Session::get('success'))
+                        <div class="alert alert-success alert-block">	
+                            <strong>{{ $message }}</strong>
+                        </div>
+                        @endif
+
                         <div class="row mt-5">
                             <div class="col-lg-4">
                                 <div class="info">

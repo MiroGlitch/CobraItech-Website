@@ -19,6 +19,11 @@
                 <div class="col-lg-8 offset-md-2">
                     <div class="card shadow-sm bg-body rounded border-0">
                         <div class="card-body">
+                            @if ($message = Session::get('success'))
+                            <div class="alert alert-success alert-block">	
+                                <strong>{{ $message }}</strong>
+                            </div>
+                            @endif
                             <form action="{{route('send.career')}}" method="post" role="form" class="php-email-form" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">

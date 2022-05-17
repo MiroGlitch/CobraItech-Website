@@ -16,6 +16,11 @@
                 <div class="col-lg-8 offset-md-2">
                     <div class="card shadow-sm bg-body rounded border-0">
                         <div class="card-body">
+                            @if ($message = Session::get('success'))
+                            <div class="alert alert-success alert-block">	
+                                <strong>{{ $message }}</strong>
+                            </div>
+                            @endif
                             <div class="form-text mb-3">
                                 <small>Note: Please answer the <strong> Issue Section</strong> thoroughly so
                                     that we
