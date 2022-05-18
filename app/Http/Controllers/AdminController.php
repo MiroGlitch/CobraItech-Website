@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use File;
+
 use App\Models\Support;
 use App\Models\Contact;
 use App\Models\Career;
+
 
 use App\Mail\AcceptMail;
 
@@ -72,14 +75,6 @@ class AdminController extends Controller
     {
         $data = Career::find($id);
         $data->status = 1;
-
-        $data2 = [
-            'name' => $data->name,
-            'email' => $data->email
-        ];
-
-        Mail::to($data->email)->send(new AcceptMail($data2));
-
         $data->save();
         return redirect('career-summary');
     }
@@ -88,6 +83,22 @@ class AdminController extends Controller
     {
         $data = Career::find($id);
         $data->status = 0;
+        $data->save();
+        return redirect('career-summary');
+    }
+
+    public function activateApplication($id)
+    {
+        $data = Career::find($id);
+        $data->accept = 1;
+
+        $data2 = [
+            'name' => $data->name,
+            'email' => $data->email
+        ];
+
+        Mail::to($data->email)->send(new AcceptMail($data2));
+
         $data->save();
         return redirect('career-summary');
     }

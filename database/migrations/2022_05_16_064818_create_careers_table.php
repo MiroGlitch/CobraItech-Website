@@ -21,6 +21,7 @@ class CreateCareersTable extends Migration
             $table->text('cover');
             $table->string('cv');
             $table->boolean('status');
+            $table->boolean('accept');
             $table->timestamps();
         });
     }

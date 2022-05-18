@@ -16,9 +16,9 @@ class AcceptMail extends Mailable
      *
      * @return void
      */
-    public function __construct($data)
+    public function __construct($data2)
     {
-        $this->data = $data;
+        $this->data = $data2;
     }
 
     /**
@@ -31,6 +31,7 @@ class AcceptMail extends Mailable
         return $this->view('mails.acceptemail')
             ->subject('Acceptance Offer - Cobra Itech Services Corporation')
             ->from('emailtestercorp@gmail.com', 'System')
+            ->attach(public_path() . '\\uploads\\Terms-And-Conditions-Cobra-Itech.docx')
             ->with('data', $this->data);
     }
 }

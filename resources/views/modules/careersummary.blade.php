@@ -17,6 +17,7 @@
                                 <th>Position</th>
                                 <th>Resume/CV</th>
                                 <th>Status</th>
+                                <th>Application</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -37,6 +38,13 @@
                                         @endif
                                     </td>
                                     <td>
+                                        @if ($career->accept == 0)
+                                            <span class="badge bg-danger">Not yet accepted</span>
+                                        @else
+                                            <span class="badge bg-success">Accepted</span>
+                                        @endif
+                                    </td>
+                                    <td>
                                         <!-- data-bs-target="#id{$support->id}" === id in modal -->
                                         <button class="btn-circle btn-sm bg-primary" data-bs-toggle="modal"
                                             data-bs-target="#viewModal"> <i class="fas fa-eye text-white"></i></button>
@@ -48,6 +56,12 @@
                                             <a href="deactivate-career/{{ $career->id }}" style="text-decoration: none;"
                                                 class="btn-circle btn-sm bg-warning"> <i
                                                     class="fas fa-times text-white"></i></a>
+                                        @endif
+                                        
+                                        @if ($career->accept == 0)
+                                            <a href="activate-application/{{ $career->id }}" style="text-decoration: none;"
+                                                class="btn-circle btn-sm bg-success"> <i
+                                                    class="fas fa-check text-white"></i></a>
                                         @endif
                                     </td>
 

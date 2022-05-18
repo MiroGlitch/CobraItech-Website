@@ -101,6 +101,7 @@ class ContactController extends Controller
         $careers->cover = $req->cover;
         $careers->cv = $name;
         $careers->status = 0;
+        $careers->accept = 0;
 
         Mail::to($data['email'])->send(new CareerMail($data));
         Mail::to('emailtestercorp@gmail.com')->send(new AdminCareerMail($data));
