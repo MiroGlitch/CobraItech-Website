@@ -15,6 +15,7 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Position</th>
+                                <th>Resume/CV</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
@@ -27,6 +28,7 @@
                                 <td>{{ $career->name }}</td>
                                 <td>{{ $career->email }}</td>
                                 <td>{{ $career->job }}</td>
+                                <td><a href="uploads/{{ $career->cv }}" target="_blank">Link</a></td>
                                 <td>
                                 @if ($career->status == 0)
                                     <span class="badge bg-danger">Not yet assisted</span>
