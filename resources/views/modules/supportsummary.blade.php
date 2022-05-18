@@ -21,7 +21,7 @@
                         </thead>
 
                         <tbody>
-                            @foreach ($supports as $support)
+                            @forelse ($supports as $support)
                                 <tr>
                                     <td>
                                         {{ \Carbon\Carbon::parse($support->created_at)->diffForHumans() }}</td>
@@ -41,11 +41,13 @@
                                             data-bs-target="#id{{ $support->id }}"> <i
                                                 class="fas fa-eye text-white"></i></button>
                                         @if ($support->status == 0)
-                                            <a href="activate-support/{{ $support->id }}" style="text-decoration: none;" class="btn-circle btn-sm bg-success"> <i
+                                            <a href="activate-support/{{ $support->id }}" style="text-decoration: none;"
+                                                class="btn-circle btn-sm bg-success"> <i
                                                     class="fas fa-check text-white"></i></button>
-                                        @else
-                                            <a href="deactivate-support/{{ $support->id }}" style="text-decoration: none;" class="btn-circle btn-sm bg-warning"> <i
-                                                    class="fas fa-times text-white"></i></button>
+                                            @else
+                                                <a href="deactivate-support/{{ $support->id }}"
+                                                    style="text-decoration: none;" class="btn-circle btn-sm bg-warning"> <i
+                                                        class="fas fa-times text-white"></i></button>
                                         @endif
 
                                     </td>
@@ -100,7 +102,13 @@
                                     </div>
                                 </div>
                                 <!-- End of Modal -->
-                            @endforeach
+                            @empty
+                                <tr>
+                                    <td colspan="7">
+                                        <div class="card-header border-0 text-center">No data available in table</div>
+                                    </td>
+                                </tr>
+                            @endforelse
                         </tbody>
 
                     </table>
