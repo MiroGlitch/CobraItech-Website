@@ -7,7 +7,7 @@
 
         <div class="card d-card">
             <div class="card-body">
-                <div class="table-responsive">
+                <div class="table-responsive py-3">
                     <table class="table table-borderless">
                         <thead>
                             <tr>
@@ -31,38 +31,66 @@
                                     <td>{{ $career->job }}</td>
                                     <td><a href="uploads/{{ $career->cv }}" target="_blank">Link</a></td>
                                     <td>
-                                        @if ($career->status == 0)
-                                            <span class="badge bg-danger">Not yet assisted</span>
-                                        @else
-                                            <span class="badge bg-success">Assisted</span>
-                                        @endif
+                                        <div class="dropdown">
+                                            <button class="btn dropdown-toggle shadow-none p-0" type="button"
+                                                id="statusDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                @if ($career->status == 0)
+                                                    <span class="badge bg-danger">Not yet assisted</span>
+                                                @else
+                                                    <span class="badge bg-success">Assisted</span>
+                                                @endif
+
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="statusDropdown">
+                                                <li>
+                                                    <h6 class="dropdown-header">Actions:</h6>
+                                                </li>
+                                                <li>
+                                                    @if ($career->status == 0)
+                                                        <a class="dropdown-item"
+                                                            href="activate-career/{{ $career->id }}">Assisted</a>
+                                                    @else
+                                                        <a class="dropdown-item"
+                                                            href="deactivate-career/{{ $career->id }}">Not yet
+                                                            assisted</a>
+                                                    @endif
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </td>
                                     <td>
-                                        @if ($career->accept == 0)
-                                            <span class="badge bg-danger">Not yet accepted</span>
-                                        @else
+                                        @if ($career->accept == 1)
                                             <span class="badge bg-success">Accepted</span>
+                                        @else
+                                            <div class="dropdown">
+                                                <button class="btn dropdown-toggle shadow-none p-0" type="button"
+                                                    id="acceptDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    @if ($career->accept == 0)
+                                                        <span class="badge bg-danger">Not yet accepted</span>
+                                                    @else
+                                                        <span class="badge bg-success">Accepted</span>
+                                                    @endif
+
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="acceptDropdown">
+                                                    <li>
+                                                        <h6 class="dropdown-header">Actions:</h6>
+                                                    </li>
+                                                    <li>
+                                                        @if ($career->accept == 0)
+                                                            <a class="dropdown-item"
+                                                                href="activate-application/{{ $career->id }}">Accepted</a>
+                                                        @endif
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         @endif
                                     </td>
-                                    <td>
+
+                                    <td class="d-flex justify-content-center align-items-center">
                                         <!-- data-bs-target="#id{$support->id}" === id in modal -->
                                         <button class="btn-circle btn-sm bg-primary" data-bs-toggle="modal"
                                             data-bs-target="#viewModal"> <i class="fas fa-eye text-white"></i></button>
-                                        @if ($career->status == 0)
-                                            <a href="activate-career/{{ $career->id }}" style="text-decoration: none;"
-                                                class="btn-circle btn-sm bg-success"> <i
-                                                    class="fas fa-check text-white"></i></a>
-                                        @else
-                                            <a href="deactivate-career/{{ $career->id }}" style="text-decoration: none;"
-                                                class="btn-circle btn-sm bg-warning"> <i
-                                                    class="fas fa-times text-white"></i></a>
-                                        @endif
-                                        
-                                        @if ($career->accept == 0)
-                                            <a href="activate-application/{{ $career->id }}" style="text-decoration: none;"
-                                                class="btn-circle btn-sm bg-success"> <i
-                                                    class="fas fa-check text-white"></i></a>
-                                        @endif
                                     </td>
 
                                 </tr>
@@ -115,7 +143,7 @@
 
                             @empty
                                 <tr>
-                                    <td colspan="7">
+                                    <td colspan="8">
                                         <div class="card-header border-0 text-center">No data available in table</div>
                                     </td>
                                 </tr>

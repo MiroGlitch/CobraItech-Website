@@ -7,7 +7,7 @@
 
         <div class="card d-card">
             <div class="card-body">
-                <div class="table-responsive">
+                <div class="table-responsive py-3">
                     <table class="table table-borderless">
                         <thead>
                             <tr>
