@@ -9,6 +9,8 @@ $('#career-btn').on('click', function () {
   if (name == '' || email == '' || resume == '' || job.value === '' || cover == '') {
     swal('Error!', 'Please fill up the fields!', 'error');
     return false;
+  } else {
+    $("#pageloader").fadeIn();
   }
 });
 
@@ -26,6 +28,8 @@ $('#support-btn').on('click', function () {
   } else if (isNaN(number)) {
     swal('Error!', 'Please enter a valid contact number!', 'error');
     return false;
+  } else {
+    $("#pageloader").fadeIn();
   }
 });
 
@@ -39,6 +43,8 @@ $('#contact-btn').on('click', function () {
   if (name == '' || email == '' || subject == '' || message == '') {
     swal('Error!', 'Please fill up the fields!', 'error');
     return false;
+  } else {
+    $("#pageloader").fadeIn();
   }
 });
 
