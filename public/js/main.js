@@ -11,6 +11,7 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 });
 
+//Sweet Alert validation for accepting applicant 
 $('.accept_confirm').on('click', function (e) {
     e.preventDefault();
     let form = $(this).closest("form");
