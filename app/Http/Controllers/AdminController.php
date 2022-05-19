@@ -17,6 +17,11 @@ use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function careerSummaryPage()
     {
         $careers = DB::table('careers')
@@ -44,7 +49,7 @@ class AdminController extends Controller
         $notAssistedContacts = DB::table('contacts')->where('status', 0)->count();
         $notAssistedCareers = DB::table('careers')->where('status', 0)->count();
         $notAssistedSupports = DB::table('supports')->where('status', 0)->count();
-            
+
         return view('modules.supportsummary', [
             'supports' => $supports,
             'notAssistedContacts' => $notAssistedContacts,

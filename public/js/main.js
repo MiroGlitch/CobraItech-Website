@@ -10,3 +10,28 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     }
 });
+
+$('.accept_confirm').on('click', function (e) {
+    e.preventDefault();
+    let form = $(this).closest("form");
+
+    swal({
+        title: "Are you sure?",
+        text: "Do you want to accept this applicant?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+    })
+        .then((willAccept) => {
+            if (willAccept) {
+                form.submit();
+                swal({
+                    title: "Accepted!",
+                    text: "This applicant is already hired!",
+                    icon: "success",
+                });
+            } else {
+                swal("No changes were made!");
+            }
+        });
+})

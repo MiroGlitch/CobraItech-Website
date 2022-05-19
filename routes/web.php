@@ -39,7 +39,7 @@ Route::get('/contact-summary', [AdminController::class, 'contactSummaryPage'])->
 Route::get('/activate-career/{id}', [AdminController::class, 'activateCareer']);
 Route::get('/deactivate-career/{id}', [AdminController::class, 'deactivateCareer']);
 
-Route::get('/activate-application/{id}', [AdminController::class, 'activateApplication']);
+Route::post('/activate-application/{id}', [AdminController::class, 'activateApplication']);
 
 Route::get('/activate-contact/{id}', [AdminController::class, 'activateContact']);
 Route::get('/deactivate-contact/{id}', [AdminController::class, 'deactivateContact']);

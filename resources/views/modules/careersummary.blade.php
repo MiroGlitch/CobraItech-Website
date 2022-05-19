@@ -78,8 +78,13 @@
                                                     </li>
                                                     <li>
                                                         @if ($career->accept == 0)
-                                                            <a class="dropdown-item"
-                                                                href="activate-application/{{ $career->id }}">Accepted</a>
+                                                            <form action="/activate-application/{{ $career->id }}"
+                                                                method="post">
+                                                                @csrf
+                                                                <button class="dropdown-item accept_confirm"
+                                                                    type="submit">Accepted</button>
+
+                                                            </form>
                                                         @endif
                                                     </li>
                                                 </ul>

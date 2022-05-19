@@ -25,6 +25,11 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <title>@yield('title') | Cobra Itech Services Corporation</title>
 
