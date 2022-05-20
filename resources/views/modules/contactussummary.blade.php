@@ -39,13 +39,19 @@
                                         <button class="btn-circle btn-sm bg-primary" data-bs-toggle="modal"
                                             data-bs-target="#viewModal"> <i class="fas fa-eye text-white"></i></button>
                                         @if ($contact->status == 0)
-                                            <a href="activate-contact/{{ $contact->id }}" style="text-decoration: none;"
-                                                class="btn-circle btn-sm bg-success"> <i
+                                            <form action="{{route('activate.contact')}}" method="post" style="display: inline">
+                                                @csrf
+                                                <input type="hidden" name="id" id="id" value="{{ $contact->id }}">
+                                                <button class="btn-circle btn-sm bg-success"> <i
                                                     class="fas fa-check text-white"></i></button>
-                                            @else
-                                                <a href="deactivate-contact/{{ $contact->id }}"
-                                                    style="text-decoration: none;" class="btn-circle btn-sm bg-warning"> <i
+                                            </form>
+                                        @else
+                                            <form action="{{route('deactivate.contact')}}" method="post" style="display: inline">
+                                                @csrf
+                                                <input type="hidden" name="id" id="id" value="{{ $contact->id }}">
+                                                <button class="btn-circle btn-sm bg-warning"> <i
                                                         class="fas fa-times text-white"></i></a>
+                                            </form>
                                         @endif
                                     </td>
 

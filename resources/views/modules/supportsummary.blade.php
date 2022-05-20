@@ -41,13 +41,19 @@
                                             data-bs-target="#id{{ $support->id }}"> <i
                                                 class="fas fa-eye text-white"></i></button>
                                         @if ($support->status == 0)
-                                            <a href="activate-support/{{ $support->id }}" style="text-decoration: none;"
-                                                class="btn-circle btn-sm bg-success"> <i
-                                                    class="fas fa-check text-white"></i></button>
-                                            @else
-                                                <a href="deactivate-support/{{ $support->id }}"
-                                                    style="text-decoration: none;" class="btn-circle btn-sm bg-warning"> <i
+                                            <form action="{{route('activate.support')}}" method="post" style="display: inline">
+                                                @csrf
+                                                <input type="hidden" name="id" id="id" value="{{ $support->id }}">
+                                                <button class="btn-circle btn-sm bg-success"> <i
+                                                        class="fas fa-check text-white"></i></button>
+                                            </form>
+                                        @else
+                                            <form action="{{route('deactivate.support')}}" method="post" style="display: inline">
+                                                @csrf
+                                                <input type="hidden" name="id" id="id" value="{{ $support->id }}">
+                                                <button class="btn-circle btn-sm bg-warning"> <i
                                                         class="fas fa-times text-white"></i></button>
+                                            </form>
                                         @endif
 
                                     </td>

@@ -31,6 +31,7 @@ $('.accept_confirm').on('click', function (e) {
                     text: "This applicant is already hired!",
                     icon: "success",
                 });
+                $("#pageloader").fadeIn();
             } else {
                 swal("No changes were made!");
             }

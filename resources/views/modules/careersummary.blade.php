@@ -47,12 +47,17 @@
                                                 </li>
                                                 <li>
                                                     @if ($career->status == 0)
-                                                        <a class="dropdown-item"
-                                                            href="activate-career/{{ $career->id }}">Assisted</a>
+                                                    <form action="{{route('activate.career')}}" method="post">
+                                                        @csrf
+                                                        <input type="hidden" name="id" id="id" value="{{ $career->id }}">
+                                                        <button class="dropdown-item">Assisted</button>
+                                                    </form>
                                                     @else
-                                                        <a class="dropdown-item"
-                                                            href="deactivate-career/{{ $career->id }}">Not yet
-                                                            assisted</a>
+                                                    <form action="{{route('deactivate.career')}}" method="post">
+                                                        @csrf
+                                                        <input type="hidden" name="id" id="id" value="{{ $career->id }}">
+                                                        <button class="dropdown-item">Not yet assisted</button>
+                                                    </form>
                                                     @endif
                                                 </li>
                                             </ul>

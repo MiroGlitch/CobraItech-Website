@@ -36,16 +36,16 @@ Route::get('/career-summary', [AdminController::class, 'careerSummaryPage'])->na
 Route::get('/support-summary', [AdminController::class, 'supportSummaryPage'])->name('support.summary');
 Route::get('/contact-summary', [AdminController::class, 'contactSummaryPage'])->name('contact.summary');
 
-Route::get('/activate-career/{id}', [AdminController::class, 'activateCareer']);
-Route::get('/deactivate-career/{id}', [AdminController::class, 'deactivateCareer']);
+Route::post('/activate-career', [AdminController::class, 'activateCareer'])->name('activate.career');
+Route::post('/deactivate-career', [AdminController::class, 'deactivateCareer'])->name('deactivate.career');
 
 Route::post('/activate-application/{id}', [AdminController::class, 'activateApplication']);
 
-Route::get('/activate-contact/{id}', [AdminController::class, 'activateContact']);
-Route::get('/deactivate-contact/{id}', [AdminController::class, 'deactivateContact']);
+Route::post('/activate-contact', [AdminController::class, 'activateContact'])->name('activate.contact');
+Route::post('/deactivate-contact', [AdminController::class, 'deactivateContact'])->name('deactivate.contact');
 
-Route::get('/activate-support/{id}', [AdminController::class, 'activateSupport']);
-Route::get('/deactivate-support/{id}', [AdminController::class, 'deactivateSupport']);
+Route::post('/activate-support', [AdminController::class, 'activateSupport'])->name('activate.support');
+Route::post('/deactivate-support', [AdminController::class, 'deactivateSupport'])->name('deactivate.support');
 
 Route::get('/template', function () {
     return view('mails.admincareeremail');

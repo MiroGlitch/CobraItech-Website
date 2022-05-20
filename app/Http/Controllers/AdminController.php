@@ -76,17 +76,17 @@ class AdminController extends Controller
         ]);
     }
 
-    public function activateCareer($id)
+    public function activateCareer(Request $req)
     {
-        $data = Career::find($id);
+        $data = Career::find($req->id);
         $data->status = 1;
         $data->save();
         return redirect('career-summary');
     }
 
-    public function deactivateCareer($id)
+    public function deactivateCareer(Request $req)
     {
-        $data = Career::find($id);
+        $data = Career::find($req->id);
         $data->status = 0;
         $data->save();
         return redirect('career-summary');
@@ -108,33 +108,33 @@ class AdminController extends Controller
         return redirect('career-summary');
     }
 
-    public function activateContact($id)
+    public function activateContact(Request $req)
     {
-        $data = Contact::find($id);
+        $data = Contact::find($req->id);
         $data->status = 1;
         $data->save();
         return redirect('contact-summary');
     }
 
-    public function deactivateContact($id)
+    public function deactivateContact(Request $req)
     {
-        $data = Contact::find($id);
+        $data = Contact::find($req->id);
         $data->status = 0;
         $data->save();
         return redirect('contact-summary');
     }
 
-    public function activateSupport($id)
+    public function activateSupport(Request $req)
     {
-        $data = Support::find($id);
+        $data = Support::find($req->id);
         $data->status = 1;
         $data->save();
         return redirect('support-summary');
     }
 
-    public function deactivateSupport($id)
+    public function deactivateSupport(Request $req)
     {
-        $data = Support::find($id);
+        $data = Support::find($req->id);
         $data->status = 0;
         $data->save();
         return redirect('support-summary');
