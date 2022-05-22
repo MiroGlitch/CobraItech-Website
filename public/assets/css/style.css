@@ -26,7 +26,7 @@ h6 {
 }
 
 #pageloader {
-  background: rgba( 255, 255, 255, 0.8 );
+  background: rgba(255, 255, 255, 0.8);
   display: none;
   height: 100%;
   position: fixed;
@@ -862,80 +862,34 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
-.services .icon-box {
-  margin-bottom: 20px;
-  padding: 30px;
-  border-radius: 6px;
-}
 
-.services .icon-box i {
-  float: left;
-  color: #12519E;
-  font-size: 40px;
-}
-
-.services .icon-box h4 {
-  margin-left: 70px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-
-.services .icon-box h4 a {
-  color: #556270;
-  transition: 0.3s;
-}
-
-.services .icon-box p {
-  margin-left: 70px;
-  line-height: 24px;
-  font-size: 14px;
-}
-
-.services .icon-box:hover h4 a {
-  color: #12519E;
-}
-
-.services .service-content {
-  margin-bottom: 20px;
-  padding: 30px;
-  border-radius: 6px;
-}
-
-.services .service-content i {
+.service-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
+}
+
+.service-content i {
   color: #12519E;
   font-size: 40px;
 }
 
-.services .service-content h4 {
+.service-content h4 {
+  color: #556270;
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
 }
 
-.services .service-content h4 a {
-  color: #556270;
-  transition: 0.3s;
-}
-
-.services .service-content i {
-  color: #556270;
-  transition: 0.3s;
-}
-
-.services .service-content:hover i {
+.service-content h4:hover {
   color: #12519E;
 }
 
-.services .service-content p {
-  padding: 0px 30px;
+.service-content p {
   line-height: 24px;
   font-size: 14px;
-}
-
-.services .service-content:hover h4 a {
-  color: #12519E;
 }
 
 

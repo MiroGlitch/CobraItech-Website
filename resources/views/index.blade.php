@@ -228,11 +228,11 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="card border-0">
-                                <div
-                                    class="card-body service-content d-flex justify-content-center align-items-center flex-column text-center p-3">
+                                <div class="card-body service-content p-3">
                                     <i class="bi bi-mouse "></i>
-                                    <h4><a href="#">Computer Repair</a></h4>
-                                    <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                                    <h4 class="card-title">Computer Repair</h4>
+                                    <p class="card-text">Voluptatum deleniti atque corrupti quos dolores et quas
+                                        molestias excepturi sint
                                         occaecati
                                         cupiditate
                                         non provident</p>
@@ -241,11 +241,11 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card border-0">
-                                <div
-                                    class="card-body service-content d-flex justify-content-center align-items-center flex-column text-center p-3">
+                                <div class="card-body service-content p-3">
                                     <i class="bi bi-question-circle "></i>
-                                    <h4><a href="#">Help Desk Support</a></h4>
-                                    <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                    <h4 class="card-title">Help Desk Support</h4>
+                                    <p class="card-text">Minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                        ut aliquip ex ea
                                         commodo consequat
                                         tarad
                                         limino ata</p>
@@ -254,11 +254,11 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card border-0">
-                                <div
-                                    class="card-body service-content d-flex justify-content-center align-items-center flex-column text-center p-3">
+                                <div class="card-body service-content p-3">
                                     <i class="bi bi-braces "></i>
-                                    <h4><a href="#">Computer Programming</a></h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                    <h4 class="card-title">Computer Programming</h4>
+                                    <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit
+                                        esse cillum dolore eu
                                         fugiat nulla
                                         pariatur
                                     </p>
@@ -267,11 +267,11 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card border-0">
-                                <div
-                                    class="card-body service-content d-flex justify-content-center align-items-center flex-column text-center p-3">
+                                <div class="card-body service-content p-3">
                                     <i class="bi bi-server "></i>
-                                    <h4><a href="#">Database Management</a></h4>
-                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                    <h4 class="card-title">Database Management</h4>
+                                    <p class="card-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                                        qui officia
                                         deserunt mollit anim id
                                         est
                                         laborum</p>
@@ -280,11 +280,11 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card border-0">
-                                <div
-                                    class="card-body service-content d-flex justify-content-center align-items-center flex-column text-center p-3">
+                                <div class="card-body service-content p-3">
                                     <i class="bi bi-pc-display "></i>
-                                    <h4><a href="#">Website Development</a></h4>
-                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                    <h4 class="card-title">Website Development</h4>
+                                    <p class="card-text">At vero eos et accusamus et iusto odio dignissimos ducimus
+                                        qui blanditiis
                                         praesentium voluptatum
                                         deleniti atque</p>
                                 </div>
@@ -292,10 +292,9 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card border-0">
-                                <div
-                                    class="card-body service-content d-flex justify-content-center align-items-center flex-column text-center p-3">
+                                <div class="card-body service-content p-3">
                                     <i class="bi bi-phone "></i>
-                                    <h4><a href="#">Mobile App Development</a></h4>
+                                    <h4 class="card-title">Mobile App Development</h4>
                                     <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
                                         soluta nobis est
                                         eligendi</p>
@@ -325,9 +324,9 @@
                         </div>
 
                         @if ($message = Session::get('success'))
-                        <div class="alert alert-success alert-block">	
-                            <strong>{{ $message }}</strong>
-                        </div>
+                            <div class="alert alert-success alert-block">
+                                <strong>{{ $message }}</strong>
+                            </div>
                         @endif
 
                         <div class="row mt-5">
@@ -355,7 +354,8 @@
                             </div>
 
                             <div class="col-lg-8 mt-5 mt-lg-0">
-                                <form action="{{route('send.contact')}}" method="post" role="form" class="php-email-form">
+                                <form action="{{ route('send.contact') }}" method="post" role="form"
+                                    class="php-email-form">
                                     @csrf
                                     <div class="row">
                                         <div class="col-md-6 form-group">
@@ -374,7 +374,8 @@
                                     <div class="form-group mt-3">
                                         <textarea class="form-control" name="message" rows="5" placeholder="Type message"></textarea>
                                     </div>
-                                    <div class="text-center"><button type="submit" id="contact-btn">Send Message</button></div>
+                                    <div class="text-center"><button type="submit" id="contact-btn">Send
+                                            Message</button></div>
                                 </form>
                             </div>
                         </div>
