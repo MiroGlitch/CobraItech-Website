@@ -76,6 +76,19 @@ class AdminController extends Controller
         ]);
     }
 
+    public function usersPage()
+    {
+        $notAssistedContacts = DB::table('contacts')->where('status', 0)->count();
+        $notAssistedCareers = DB::table('careers')->where('status', 0)->count();
+        $notAssistedSupports = DB::table('supports')->where('status', 0)->count();
+
+        return view('modules.usermanagement', [
+            'notAssistedContacts' => $notAssistedContacts,
+            'notAssistedCareers' => $notAssistedCareers,
+            'notAssistedSupports' => $notAssistedSupports
+        ]);
+    }
+
     public function activateCareer(Request $req)
     {
         $data = Career::find($req->id);

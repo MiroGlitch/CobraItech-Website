@@ -35,6 +35,7 @@ Route::post('/send-career', [ContactController::class, 'sendCareer'])->name('sen
 Route::get('/career-summary', [AdminController::class, 'careerSummaryPage'])->name('career.summary');
 Route::get('/support-summary', [AdminController::class, 'supportSummaryPage'])->name('support.summary');
 Route::get('/contact-summary', [AdminController::class, 'contactSummaryPage'])->name('contact.summary');
+Route::get('/users-summary', [AdminController::class, 'usersPage'])->name('users.summary');
 
 Route::post('/activate-career', [AdminController::class, 'activateCareer'])->name('activate.career');
 Route::post('/deactivate-career', [AdminController::class, 'deactivateCareer'])->name('deactivate.career');

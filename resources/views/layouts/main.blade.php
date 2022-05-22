@@ -37,7 +37,8 @@
 
 <body>
     <div id="pageloader">
-        <img src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif" alt="processing..." />
+        <img src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif"
+            alt="processing..." />
     </div>
     <div class="d-flex" id="wrapper">
         <!-- Vertical Navbar -->
@@ -73,11 +74,13 @@
                         Inquiries
                         <span class="badge bg-white text-dark rounded-pill">{{ $notAssistedContacts }}</span>
                     </a>
-                    <ul class="list-group">
-
-                    </ul>
-
                 </div>
+
+                @if (Auth::user()->user_role == 1)
+                    <a href="{{ route('users.summary') }}"
+                        class="list-nav-link p-3 list-item-bg border-0 {{ Route::is('users.summary') ? 'active' : '' }}"><i
+                            class="fa-solid fa-users me-3"></i>Users Management</a>
+                @endif
 
             </div>
         </div> <!-- End of Vertical Navbar -->
@@ -115,7 +118,9 @@
         </div> <!-- End of Page Content Wrapper -->
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">

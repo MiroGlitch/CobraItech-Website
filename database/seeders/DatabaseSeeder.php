@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Admin',
             'email' => 'admin@cobraitech.com',
             'password' => Hash::make('admin'),
+            'user_role' => 1,
         ]);
     }
 }
