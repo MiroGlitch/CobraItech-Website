@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use File;
+use Hash;
 
 use App\Models\Support;
 use App\Models\Contact;
 use App\Models\Career;
+use App\Models\User;
 
 
 use App\Mail\AcceptMail;
@@ -78,11 +80,16 @@ class AdminController extends Controller
 
     public function usersPage()
     {
+        $users = DB::table('users')
+            ->latest()
+            ->get();
+
         $notAssistedContacts = DB::table('contacts')->where('status', 0)->count();
         $notAssistedCareers = DB::table('careers')->where('status', 0)->count();
         $notAssistedSupports = DB::table('supports')->where('status', 0)->count();
 
         return view('modules.usermanagement', [
+            'users' => $users,
             'notAssistedContacts' => $notAssistedContacts,
             'notAssistedCareers' => $notAssistedCareers,
             'notAssistedSupports' => $notAssistedSupports
@@ -151,5 +158,24 @@ class AdminController extends Controller
         $data->status = 0;
         $data->save();
         return redirect('support-summary');
+    }
+
+    public function addUser(Request $req)
+    {
+        $users = new User();
+        $users->name = $req->name;
+        $users->email = $req->email;
+        $users->password = Hash::make($req->pwd);
+        $users->user_role = 1;
+
+        $users->save();
+        return redirect('users-summary');
+    }
+
+    public function deleteUser(Request $req)
+    {
+        $data = User::find($req->id);
+        $data->delete();
+        return redirect('users-summary');
     }
 }

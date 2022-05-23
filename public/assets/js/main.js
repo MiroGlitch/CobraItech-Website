@@ -55,11 +55,21 @@ function fileValidation() {
 
   // Allowing file type
   var allowedExtensions = /(\.doc|\.docx|\.pdf)$/i;
-    
-  if (!allowedExtensions.exec(filePath)) {
-    swal('Error!', 'Only upload .doc/.docx/.pdf files!', 'error');
-    fileInput.value = '';
-    return false;
+
+  // File Size validation
+  if (typeof (fileInput.files) != "undefined") {
+    var size = parseFloat(fileInput.files[0].size / (1024 * 1024)).toFixed(2);
+    if(size > 10) {
+      swal('Error!', 'Please select a file with less than 10 MB', 'error');
+      fileInput.value = '';
+      return false;
+    } else if (!allowedExtensions.exec(filePath)){
+      swal('Error!', 'Only upload .doc/.docx/.pdf files!', 'error');
+      fileInput.value = '';
+      return false;
+    }
+  } else {
+      alert("This browser does not support HTML5.");
   }
 }
 

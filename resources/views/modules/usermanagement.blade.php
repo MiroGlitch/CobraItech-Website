@@ -23,14 +23,30 @@
                         </thead>
 
                         <tbody>
-                            <tr>
-                                <td>Sample Data</td>
-                                <td>Sample Data</td>
-                                <td>Sample Data</td>
-                                <td><button class="btn-circle btn-sm bg-danger"><i
-                                            class="fas fa-trash text-white"></i></button></td>
-                            </tr>
-
+                            @forelse ($users as $user)
+                                <tr>
+                                    <td>{{ $user->name }}</td>
+                                    <td>{{ $user->email }}</td>
+                                    <td>
+                                        @if ($user->user_role == 1)
+                                            admin
+                                        @endif
+                                    </td>
+                                    <td>
+                                        <form action="{{route('users.delete')}}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="id" id="id" value="{{ $user->id }}">
+                                            <button class="btn-circle btn-sm bg-danger"><i
+                                                class="fas fa-trash text-white"></i></button></td>
+                                        </form>
+                                </tr>
+                            @empty
+                                <tr>
+                                    <td colspan="7">
+                                        <div class="card-header border-0 text-center">No data available in table</div>
+                                    </td>
+                                </tr>
+                            @endforelse
                         </tbody>
 
                     </table>
@@ -47,7 +63,7 @@
                         <h5 class="modal-title" id="addUserLabel">Add User</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <form action="" method="post">
+                    <form action="{{ route('users.add') }}" method="post">
                         @csrf
                         <div class="modal-body">
                             <div class="mb-3">
@@ -71,7 +87,7 @@
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Add User</button>
+                            <button type="submit" class="btn btn-primary" id="add-btn">Add User</button>
                         </div>
                     </form>
                 </div>

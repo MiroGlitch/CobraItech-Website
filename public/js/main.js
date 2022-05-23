@@ -36,4 +36,19 @@ $('.accept_confirm').on('click', function (e) {
                 swal("No changes were made!");
             }
         });
-})
+});
+
+$('#add-btn').on('click', function () {
+    let name = $('#name').val();
+    let email = $('#email').val();
+    let password = $('#pwd').val();
+    let cpassword = $('#cpwd').val();
+  
+    if (name == '' || email == '' || password == '' || cpassword == '') {
+      swal('Error!', 'Please fill up the fields!', 'error');
+      return false;
+    } else if (password !== cpassword) {
+        swal('Error!', 'Passwords do not match!', 'error');
+        return false;
+    }
+});
