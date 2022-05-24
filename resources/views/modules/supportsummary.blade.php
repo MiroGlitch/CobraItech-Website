@@ -102,6 +102,18 @@
                                                         <div class="col-9" style="text-align: justify">
                                                             {{ $support->issue }}</div>
                                                     </div>
+                                                    <form action="{{ route('reply.support') }}" method="post" role="form" class="php-email-form">
+                                                        @csrf
+                                                        <input type="hidden" name="email" id="email" value="{{ $support->email }}">
+                                                        <input type="hidden" name="subject" id="subject" value="{{ $support->category }}">
+                                                        <div class="form-group mt-3">
+                                                            <textarea class="form-control" name="reply" id="reply" rows="3" placeholder="Message"></textarea>
+                                                        </div><br>
+                                                        <div class="d-grid gap-2 col-6 mx-auto">
+                                                            <button class="btn text-white" style="background-color: #12519E;"
+                                                                id="reply-btn">Reply</button>
+                                                        </div>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>

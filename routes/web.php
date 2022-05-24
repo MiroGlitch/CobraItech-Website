@@ -52,6 +52,9 @@ Route::post('/deactivate-support', [AdminController::class, 'deactivateSupport']
 Route::post('/add-user', [AdminController::class, 'addUser'])->name('users.add');
 Route::post('/delete-user', [AdminController::class, 'deleteUser'])->name('users.delete');
 
+Route::post('/reply-contact', [AdminController::class, 'replyContact'])->name('reply.contact');
+Route::post('/reply-support', [AdminController::class, 'replySupport'])->name('reply.support');
+
 Route::get('/template', function () {
     return view('mails.admincareeremail');
 }); // for testing only

@@ -12,6 +12,8 @@ use App\Models\User;
 
 
 use App\Mail\AcceptMail;
+use App\Mail\ReplyContactMail;
+use App\Mail\ReplySupportMail;
 
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
@@ -177,5 +179,31 @@ class AdminController extends Controller
         $data = User::find($req->id);
         $data->delete();
         return redirect('users-summary');
+    }
+
+    public function replyContact(Request $req)
+    {
+        $data = [
+            'email' => $req->email,
+            'message' => $req->reply,
+            'subject' => $req->subject
+        ];
+
+        Mail::to($data['email'])->send(new ReplyContactMail($data));
+
+        return redirect('contact-summary');
+    }
+
+    public function replySupport(Request $req)
+    {
+        $data = [
+            'email' => $req->email,
+            'message' => $req->reply,
+            'subject' => $req->subject
+        ];
+
+        Mail::to($data['email'])->send(new ReplySupportMail($data));
+
+        return redirect('support-summary');
     }
 }
