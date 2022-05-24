@@ -52,3 +52,14 @@ $('#add-btn').on('click', function () {
         return false;
     }
 });
+
+$('#reply-btn').on('click', function () {
+    let message = $('#reply').val();
+  
+    if (message == '') {
+      swal('Error!', 'Please fill up the fields!', 'error');
+      return false;
+    } else {
+        $("#pageloader").fadeIn();
+    }
+});
