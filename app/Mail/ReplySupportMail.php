@@ -29,7 +29,7 @@ class ReplySupportMail extends Mailable
     public function build()
     {
         return $this->view('mails.replysupportemail')
-            ->subject('Support - ' . $this->data['subject'])
+            ->subject('Reply: Support - ' . $this->data['subject'])
             ->from('emailtestercorp@gmail.com', 'System')
             ->with('data', $this->data);
     }
