@@ -26,21 +26,22 @@ class AdminController extends Controller
         $this->middleware('auth');
     }
 
+    public function editProfile($id)
+    {
+        $user = User::find($id);
+        return view('modules.editprofile', [
+            'user' => $user,
+        ]);
+    }
+
     public function careerSummaryPage()
     {
         $careers = DB::table('careers')
             ->latest()
             ->get();
 
-        $notAssistedContacts = DB::table('contacts')->where('status', 0)->count();
-        $notAssistedCareers = DB::table('careers')->where('status', 0)->count();
-        $notAssistedSupports = DB::table('supports')->where('status', 0)->count();
-
         return view('modules.careersummary', [
             'careers' => $careers,
-            'notAssistedContacts' => $notAssistedContacts,
-            'notAssistedCareers' => $notAssistedCareers,
-            'notAssistedSupports' => $notAssistedSupports
         ]);
     }
 
@@ -50,15 +51,9 @@ class AdminController extends Controller
             ->latest()
             ->get();
 
-        $notAssistedContacts = DB::table('contacts')->where('status', 0)->count();
-        $notAssistedCareers = DB::table('careers')->where('status', 0)->count();
-        $notAssistedSupports = DB::table('supports')->where('status', 0)->count();
 
         return view('modules.supportsummary', [
             'supports' => $supports,
-            'notAssistedContacts' => $notAssistedContacts,
-            'notAssistedCareers' => $notAssistedCareers,
-            'notAssistedSupports' => $notAssistedSupports
         ]);
     }
 
@@ -68,15 +63,9 @@ class AdminController extends Controller
             ->latest()
             ->get();
 
-        $notAssistedContacts = DB::table('contacts')->where('status', 0)->count();
-        $notAssistedCareers = DB::table('careers')->where('status', 0)->count();
-        $notAssistedSupports = DB::table('supports')->where('status', 0)->count();
 
         return view('modules.contactussummary', [
             'contacts' => $contacts,
-            'notAssistedContacts' => $notAssistedContacts,
-            'notAssistedCareers' => $notAssistedCareers,
-            'notAssistedSupports' => $notAssistedSupports
         ]);
     }
 
@@ -86,15 +75,8 @@ class AdminController extends Controller
             ->latest()
             ->get();
 
-        $notAssistedContacts = DB::table('contacts')->where('status', 0)->count();
-        $notAssistedCareers = DB::table('careers')->where('status', 0)->count();
-        $notAssistedSupports = DB::table('supports')->where('status', 0)->count();
-
         return view('modules.usermanagement', [
             'users' => $users,
-            'notAssistedContacts' => $notAssistedContacts,
-            'notAssistedCareers' => $notAssistedCareers,
-            'notAssistedSupports' => $notAssistedSupports
         ]);
     }
 

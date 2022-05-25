@@ -40,6 +40,19 @@
         <img src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif"
             alt="processing..." />
     </div>
+
+    <?php
+    $notAssistedContacts = DB::table('contacts')
+        ->where('status', 0)
+        ->count();
+    $notAssistedCareers = DB::table('careers')
+        ->where('status', 0)
+        ->count();
+    $notAssistedSupports = DB::table('supports')
+        ->where('status', 0)
+        ->count();
+    ?>
+
     <div class="d-flex" id="wrapper">
         <!-- Vertical Navbar -->
         <div class="border-end" id="sidebar-wrapper">
@@ -95,9 +108,14 @@
                     <div class="dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }}</div>
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <a href="{{ route('edit.profile', Auth::user()->id) }}" class="dropdown-item"><i
+                                class="fas fa-user me-2" style="color: #949494;"></i>Profile</a>
+
+                        <hr class="dropdown-divider">
+
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
+                            <i class="fas fa-sign-out-alt me-1" style="color: #949494;"></i> {{ __('Logout') }}
                         </a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
