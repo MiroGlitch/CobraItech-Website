@@ -43,6 +43,7 @@ Route::post('/activate-career', [AdminController::class, 'activateCareer'])->nam
 Route::post('/deactivate-career', [AdminController::class, 'deactivateCareer'])->name('deactivate.career');
 
 Route::post('/activate-application/{id}', [AdminController::class, 'activateApplication']);
+Route::post('/change-password', [AdminController::class, 'changePassword'])->name('change.password');
 
 Route::post('/activate-contact', [AdminController::class, 'activateContact'])->name('activate.contact');
 Route::post('/deactivate-contact', [AdminController::class, 'deactivateContact'])->name('deactivate.contact');

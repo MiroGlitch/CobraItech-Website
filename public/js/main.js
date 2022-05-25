@@ -63,3 +63,22 @@ $('#reply-btn').on('click', function () {
         $("#pageloader").fadeIn();
     }
 });
+
+$('#change-btn').on('click', function () {
+    let currpwd = $('#currpwd').val();
+    let npwd = $('#npwd').val();
+    let cpwd = $('#cpwd').val();
+
+    if (currpwd == '' || npwd == '' || cpwd == '') {
+        swal('Error!', 'Please fill up the fields!', 'error');
+        return false;
+    } else if (currpwd == npwd) {
+        swal('Error!', 'Your new password cannot be the same with your current password!', 'error');
+        return false;
+    } else if (npwd != cpwd) {
+        swal('Error!', 'Passwords do not match!', 'error');
+        return false;
+    } else {
+        $("#pageloader").fadeIn();
+    }
+});

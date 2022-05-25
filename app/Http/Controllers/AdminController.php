@@ -34,6 +34,18 @@ class AdminController extends Controller
         ]);
     }
 
+    public function changePassword(Request $req)
+    {
+        $data = User::find($req->id);
+        if (Hash::check($req->currpwd, $data->password)) {
+            $data->password = Hash::make($req->npwd);
+            $data->save();
+            return back()->with('success','Your password has been successfully changed!');
+        } else {
+            return back()->with('error','Your current password is incorrect!');
+        }
+    }
+
     public function careerSummaryPage()
     {
         $careers = DB::table('careers')
