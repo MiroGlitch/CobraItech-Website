@@ -8,7 +8,7 @@
         <div class="card d-card">
             <div class="card-body">
                 <div class="table-responsive py-3">
-                    <table class="table table-borderless">
+                    <table class="table table-borderless" id="myTable">
                         <thead>
                             <tr>
                                 <th>Date</th>
@@ -100,13 +100,13 @@
                                     <td class="d-flex justify-content-center align-items-center">
                                         <!-- data-bs-target="#id{$support->id}" === id in modal -->
                                         <button class="btn-circle btn-sm bg-primary" data-bs-toggle="modal"
-                                            data-bs-target="#viewModal"> <i class="fas fa-eye text-white"></i></button>
+                                            data-bs-target="#id{{ $career->id }}"> <i class="fas fa-eye text-white"></i></button>
                                     </td>
 
                                 </tr>
 
                                 <!-- Modal -->
-                                <div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="viewModalLabel"
+                                <div class="modal fade" id="id{{ $career->id }}" tabindex="-1" aria-labelledby="viewModalLabel"
                                     aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                         <div class="modal-content">

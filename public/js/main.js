@@ -82,3 +82,7 @@ $('#change-btn').on('click', function () {
         $("#pageloader").fadeIn();
     }
 });
+
+$(document).ready( function () {
+    $('#myTable').DataTable();
+} );

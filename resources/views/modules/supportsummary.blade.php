@@ -8,7 +8,7 @@
         <div class="card d-card">
             <div class="card-body">
                 <div class="table-responsive py-3">
-                    <table class="table table-borderless">
+                    <table class="table table-borderless" id="myTable">
                         <thead>
                             <tr>
                                 <th>Date</th>
