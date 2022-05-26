@@ -97,7 +97,7 @@
                                         @endif
                                     </td>
 
-                                    <td class="d-flex justify-content-center align-items-center">
+                                    <td class="d-flex align-items-center">
                                         <!-- data-bs-target="#id{$support->id}" === id in modal -->
                                         <button class="btn-circle btn-sm bg-primary" data-bs-toggle="modal"
                                             data-bs-target="#id{{ $career->id }}"> <i class="fas fa-eye text-white"></i></button>
