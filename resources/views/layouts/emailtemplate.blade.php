@@ -16,17 +16,35 @@
 
     <header>
         <div class="logo" style="padding: 20px">
-            <img src="{{ $message->embed('assets/img/logo-name.png') }}" alt="logo" srcset="" width="350"
-                style="  display: block; margin-left: auto; margin-right: auto;">
+            <a href="{{ url('/') }}" target="_blank">
+                <img src="{{ $message->embed('assets/img/logo-name.png') }}" alt="logo" srcset="" width="350"
+                    style="  display: block; margin-left: auto; margin-right: auto;"></a>
         </div>
     </header>
 
     <div style="padding:0px 30px 30px;">
 
         <div class="card-body" style="max-width: 550px; margin-right:auto; margin-left:auto;">
+            <table style="text-align:center; margin-right:auto; margin-left:auto; border-spacing:0px;">
 
-            @yield('content')
+                <!-- Content -->
+                @yield('content')
+                <!-- End of Content -->
 
+                <!-- Footer -->
+                <tr>
+                    <td style="background-color: #fff; padding: 30px 30px 20px; ">
+
+                        <p
+                            style=" font-size: 12px; margin-top:15px; color: #6c757d; font-weight:400; margin-right:auto; margin-left:auto; text-align:center;">
+                            &copy; Copyright Cobra Itech Services Corporation. All Rights Reserved <br> <a
+                                href="https://www.google.com/maps/search/?api=1&query=cobra+itech+services+corporation"
+                                target="_blank" style="text-decoration:none;">Suite 402, Jade
+                                Place Condominium, 33 Visayas Avenue, Bgy. Vasra, QC</a> </p>
+                    </td>
+                </tr>
+                <!-- End of Footer -->
+            </table>
         </div>
     </div>
 

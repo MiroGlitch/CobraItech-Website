@@ -58,7 +58,7 @@ Route::post('/reply-contact', [AdminController::class, 'replyContact'])->name('r
 Route::post('/reply-support', [AdminController::class, 'replySupport'])->name('reply.support');
 
 Route::get('/template', function () {
-    return view('mails.admincareeremail');
+    return view('mails.acceptemail');
 }); // for testing only
 
 //Auth::routes();
