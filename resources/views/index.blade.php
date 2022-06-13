@@ -12,12 +12,9 @@
                         <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Cobra Itech Services
                                 Corporation</span>
                         </h2>
-                        <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid.
-                            Sequi ea ut
-                            et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea
-                            voluptatem. Esse
-                            doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                        <a href="#main" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
+                        <p class="animate__animated animate__fadeInUp">Cobra Itech Services Corporation provides a full range of IT services, 
+                            from computer repair and remote help desk support to programming, to database management, etc.</p>
+                        <a href="#main-page" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
                             More</a>
                     </div>
                 </div>
@@ -27,7 +24,7 @@
     </section>
 
 
-    <main id="main">
+    <main id="main-page">
         <!-- ======= Feature Section ======= -->
         <section id="feature-section" class="feature-section mt-4">
             <div class="container divider-caption">
@@ -187,16 +184,11 @@
                             class="container divider-caption d-flex justify-content-center align-items-center flex-column mt-5">
                             <h4>About Us</h4>
                             <h1>Who We Are</h1>
-                            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-                                ipsam modi odio.
-                                Eligendi quos animi
-                                optio fugit omnis dolore! Voluptatum laudantium itaque numquam recusandae possimus
-                                sapiente quibusdam
-                                doloremque, error dolorum. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Asperiores vitae
-                                magni molestias quam earum dolore odio! Sed, minus adipisci possimus totam excepturi,
-                                qui pariatur
-                                debitis reprehenderit nostrum error optio. Debitis.
+                            <p class="text-center">Cobra Itech Services Corporation got its name from 
+                                the 2 leading senior consultants and principals of the company. Our key officers are seasoned technical leaders with more than <strong>50 years</strong> experience in I.T. 
+                                from large information technology service providers and from backgrounds in security and intelligence institutions, 
+                                including the US Air Force, Central Intelligence Agency (CIA), 
+                                executive branch of the US government, Supreme Headquarters Allied Powers Europe (SHAPE), and Germany’s Bundesnachrichtendienst.
                             </p>
                         </div>
 
@@ -210,11 +202,7 @@
             <div class="container divider-caption d-flex justify-content-center align-items-center flex-column">
                 <h4>Services</h4>
                 <h1>What We Offer</h1>
-                <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, sequi
-                    repellat
-                    dignissimos perferendis
-                    libero
-                </p>
+                <p class="text-center">With every client, Cobra Itech does the job with utmost professionalism.</p>
             </div>
 
             <div class="divider-container mt-0">

@@ -8,8 +8,7 @@
 
             <h4>Services</h4>
             <h1>What We Offer</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, sequi repellat dignissimos perferendis
-                libero
+            <p>With every client, Cobra Itech does the job with utmost professionalism.
             </p>
         </div>
 
