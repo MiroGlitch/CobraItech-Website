@@ -67,5 +67,7 @@ Route::get('admin-panel', [LoginController::class, 'showLoginForm'])->name('logi
 Route::post('admin-panel', [LoginController::class, 'login']);
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
+Route::get('/password/reset', [PageDirectory::class, 'forgotPassword'])->name('password.reset');
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

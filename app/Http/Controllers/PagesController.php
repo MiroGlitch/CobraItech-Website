@@ -46,4 +46,9 @@ class PagesController extends Controller
     {
         return view('main.contact');
     }
+
+    public function forgotPassword()
+    {
+        return view('auth.passwords.email');
+    }
 }

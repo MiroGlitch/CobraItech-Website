@@ -1,0 +1,54 @@
+.login-card {
+
+    width: 700px;
+    padding: 2rem 3rem;
+}
+
+.input-form {
+    position: relative;
+    display: inline-block;
+}
+
+
+.input-form input {
+    border: 0;
+    border-bottom: 1px solid #dedede;
+    background-color: transparent;
+    box-shadow: none !important;
+}
+
+.input-form i {
+    position: absolute;
+    font-size: 20px;
+    color: #dedede;
+    margin: 7px 0px 7px 20px;
+}
+
+.input-form input:focus {
+    border-color: #12519e;
+    border-width: 2px;
+    box-shadow: none !important;
+}
+
+.input-form input:focus+i {
+    color: #12519e;
+}
+
+.box-input-form {
+    padding-left: 50px !important;
+}
+
+.pw-link {
+    color: #12519e;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-header .page-heading {
+    color: #12519e;
+}
+
+.login-header .page-subtitle {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
