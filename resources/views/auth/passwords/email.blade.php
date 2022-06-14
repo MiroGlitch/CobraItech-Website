@@ -11,10 +11,10 @@
                     </div>
 
                     <div class="col-sm">
-                        @if (session('status'))
-                            <div class="alert alert-success">
-                                {{ session('status') }}
-                            </div>
+                    @if ($message = Session::get('success'))
+                        <div class="alert alert-success alert-block">	
+                            <strong>{{ $message }}</strong>
+                        </div>
                         @endif
                         <form method="POST" action="{{ route('password.email') }}">
                             @csrf

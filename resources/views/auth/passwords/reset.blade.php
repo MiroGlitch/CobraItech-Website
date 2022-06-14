@@ -12,16 +12,15 @@
                     </div>
 
                     <div class="col-sm">
-                        {{-- <form method="POST" action="{{ route('password.update') }}"> --}}
-                        <form method="POST" action="">
+                        <form method="POST" action="{{ route('password.update') }}">
                             @csrf
-                            {{-- <input type="hidden" name="token" value="{{ $token }}"> --}}
+                            <input type="hidden" name="token" value="{{ $token }}">
 
                             <div class="form-group mb-3 input-form d-flex justify-content-start flex-column">
                                 <input id="email" type="email"
                                     class="form-control box-input-form  @error('email') is-invalid @enderror" name="email"
-                                    value="{{ old('email') }}" required="" autocomplete="email" autofocus=""
-                                    placeholder="Email">
+                                    value="{{ $email ?? old('email') }}" required="" autocomplete="email" autofocus=""
+                                    placeholder="Email" readonly>
                                 <i class="fas fa-envelope"></i>
 
                                 @error('email')

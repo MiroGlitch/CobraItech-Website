@@ -5,6 +5,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PagesController as PageDirectory;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\CustomForgotPasswordController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -62,7 +64,7 @@ Route::get('/template', function () {
     return view('mails.acceptemail');
 }); // for testing only
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('admin-panel', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('admin-panel', [LoginController::class, 'login']);
@@ -74,6 +76,11 @@ Route::get('/password-reset-form', function () {
 Route::get('/password-reset-email', function () {
     return view('auth.passwords.confirm');
 }); //for viewing only
+
+Route::get('password/reset', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
+Route::post('password/email', [CustomForgotPasswordController::class, 'submitForgetPasswordForm'])->name('password.email');
+Route::get('password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
+Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
 
 //Route::get('/password/reset', [PageDirectory::class, 'forgotPassword'])->name('password.reset');
 
