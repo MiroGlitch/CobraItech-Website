@@ -61,7 +61,7 @@ Route::post('/reply-contact', [AdminController::class, 'replyContact'])->name('r
 Route::post('/reply-support', [AdminController::class, 'replySupport'])->name('reply.support');
 
 Route::get('/template', function () {
-    return view('mails.acceptemail');
+    return view('mails.forgotpasswordemail');
 }); // for testing only
 
 //Auth::routes();
@@ -70,12 +70,6 @@ Route::get('admin-panel', [LoginController::class, 'showLoginForm'])->name('logi
 Route::post('admin-panel', [LoginController::class, 'login']);
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/password-reset-form', function () {
-    return view('auth.passwords.reset');
-}); //for viewing only
-Route::get('/password-reset-email', function () {
-    return view('auth.passwords.confirm');
-}); //for viewing only
 
 Route::get('password/reset', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
 Route::post('password/email', [CustomForgotPasswordController::class, 'submitForgetPasswordForm'])->name('password.email');
