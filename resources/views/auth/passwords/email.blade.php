@@ -11,7 +11,12 @@
                     </div>
 
                     <div class="col-sm">
-                        <form method="POST" action="">
+                        @if (session('status'))
+                            <div class="alert alert-success">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+                        <form method="POST" action="{{ route('password.email') }}">
                             @csrf
                             <div class="form-group mb-3 input-form d-flex justify-content-start flex-column">
 

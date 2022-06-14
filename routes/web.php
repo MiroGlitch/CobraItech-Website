@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PagesController as PageDirectory;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -61,13 +62,13 @@ Route::get('/template', function () {
     return view('mails.acceptemail');
 }); // for testing only
 
-//Auth::routes();
+Auth::routes();
 
 Route::get('admin-panel', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('admin-panel', [LoginController::class, 'login']);
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/password/reset', [PageDirectory::class, 'forgotPassword'])->name('password.reset');
+//Route::get('/password/reset', [PageDirectory::class, 'forgotPassword'])->name('password.reset');
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -42,7 +42,7 @@
                                 @enderror
                             </div>
 
-                            <a class="pw-link d-flex justify-content-end" href="{{ route('password.reset') }}">Forgot
+                            <a class="pw-link d-flex justify-content-end" href="{{ route('password.request') }}">Forgot
                                 your
                                 password?</a>
                             <button type="submit" class="btn w-100 text-white mt-4 "
