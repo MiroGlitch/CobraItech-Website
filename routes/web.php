@@ -68,6 +68,13 @@ Route::get('admin-panel', [LoginController::class, 'showLoginForm'])->name('logi
 Route::post('admin-panel', [LoginController::class, 'login']);
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
+Route::get('/password-reset-form', function () {
+    return view('auth.passwords.reset');
+}); //for viewing only
+Route::get('/password-reset-email', function () {
+    return view('auth.passwords.confirm');
+}); //for viewing only
+
 //Route::get('/password/reset', [PageDirectory::class, 'forgotPassword'])->name('password.reset');
 
 
