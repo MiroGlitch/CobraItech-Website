@@ -12,8 +12,10 @@
                         <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Cobra Itech Services
                                 Corporation</span>
                         </h2>
-                        <p class="animate__animated animate__fadeInUp">Cobra Itech Services Corporation provides a full range of IT services, 
-                            from computer repair and remote help desk support to programming, to database management, etc.</p>
+                        <p class="animate__animated animate__fadeInUp">Cobra Itech Services Corporation provides a full range
+                            of IT services,
+                            from computer repair and remote help desk support to programming, to database management, etc.
+                        </p>
                         <a href="#main-page" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
                             More</a>
                     </div>
@@ -184,11 +186,14 @@
                             class="container divider-caption d-flex justify-content-center align-items-center flex-column mt-5">
                             <h4>About Us</h4>
                             <h1>Who We Are</h1>
-                            <p class="text-center">Cobra Itech Services Corporation got its name from 
-                                the 2 leading senior consultants and principals of the company. Our key officers are seasoned technical leaders with more than <strong>50 years</strong> experience in I.T. 
-                                from large information technology service providers and from backgrounds in security and intelligence institutions, 
-                                including the US Air Force, Central Intelligence Agency (CIA), 
-                                executive branch of the US government, Supreme Headquarters Allied Powers Europe (SHAPE), and Germany’s Bundesnachrichtendienst.
+                            <p class="text-center">Cobra Itech Services Corporation got its name from
+                                the 2 leading senior consultants and principals of the company. Our key officers are
+                                seasoned technical leaders with more than <strong>50 years</strong> experience in I.T.
+                                from large information technology service providers and from backgrounds in security and
+                                intelligence institutions,
+                                including the US Air Force, Central Intelligence Agency (CIA),
+                                executive branch of the US government, Supreme Headquarters Allied Powers Europe (SHAPE),
+                                and Germany’s Bundesnachrichtendienst.
                             </p>
                         </div>
 

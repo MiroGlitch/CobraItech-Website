@@ -32,7 +32,7 @@
     <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" /> -->
 
@@ -45,7 +45,8 @@
 <body>
     <!-- ======= Header ======= -->
     <div id="pageloader">
-        <img src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif" alt="processing..." />
+        <img src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif"
+            alt="processing..." />
     </div>
     <header id="header" class="fixed-top d-flex align-items-center">
         <div class="container d-flex align-items-center">
@@ -141,8 +142,10 @@
                         <h4>Useful Links</h4>
                         <ul>
                             <li><i class="bx bx-chevron-right"></i> <a href="{{ url('/') }}">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('company') }}">About Us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('contactus') }}">Contact Us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('company') }}">About Us</a>
+                            </li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('contactus') }}">Contact Us</a>
+                            </li>
                             <li><i class="bx bx-chevron-right"></i> <a href="{{ route('partners') }}">Partners &
                                     Clients</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="{{ route('careers') }}">Careers</a></li>
@@ -153,20 +156,26 @@
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Our Services</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Computer Repair</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Help Desk Support</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Computer Programming</a>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Computer
+                                    Repair</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Help Desk
+                                    Support</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Computer
+                                    Programming</a>
                             </li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Database Management</a>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Database
+                                    Management</a>
                             </li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Website Development</a>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Website
+                                    Development</a>
                             </li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Mobile App Development</a>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('services') }}">Mobile App
+                                    Development</a>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                    <div class="col-lg-4 col-md-6">
                         <h4>Our Location</h4>
                         <iframe style="border:0; width: 300; height: 300;"
                             src="https://maps.google.com/maps?q=cobra%20itech&t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -189,7 +198,9 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Vendor JS Files -->
     <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
@@ -199,7 +210,7 @@
     <script src="{{ asset('assets/vendor/waypoints/noframework.waypoints.js') }}"></script>
 
     <!-- Template Main JS File -->
-    <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ asset('js/main-pages.js') }}"></script>
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

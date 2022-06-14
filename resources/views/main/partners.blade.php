@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-lg-12 d-flex justify-content-center">
                     <ul id="partner-flters">
-                        <li data-filter=".filter-app">Governtment</li>
+                        <li data-filter=".filter-app">Government</li>
                         <li data-filter=".filter-card">Universities</li>
                         <li data-filter=".filter-web">Companies</li>
                     </ul>
@@ -46,7 +46,8 @@
                         <img src="{{ asset('assets/img/clients-partners/pc-8.webp') }}" class="rounded mx-auto d-block"
                             alt="">
                         <div class="partner-info">
-                            <h4><a href="https://www.dswd.gov.ph/" target="_blank" style="color: white">DEPARTMENT OF SOCIAL WELFARE AND DEVELOPMENT</a></h4>
+                            <h4><a href="https://www.dswd.gov.ph/" target="_blank" style="color: white">DEPARTMENT OF SOCIAL
+                                    WELFARE AND DEVELOPMENT</a></h4>
                         </div>
                     </div>
                 </div>
@@ -56,7 +57,8 @@
                         <img src="{{ asset('assets/img/clients-partners/pc-12.webp') }}" class="rounded mx-auto d-block"
                             alt="">
                         <div class="partner-info">
-                            <h4><a href="https://www.dti.gov.ph/" target="_blank" style="color: white">DEPARTMENT OF TRADE AND INDUSTRY</a></h4>
+                            <h4><a href="https://www.dti.gov.ph/" target="_blank" style="color: white">DEPARTMENT OF TRADE
+                                    AND INDUSTRY</a></h4>
                         </div>
                     </div>
                 </div>
@@ -66,7 +68,8 @@
                         <img src="{{ asset('assets/img/clients-partners/pc-13.webp') }}" class="rounded mx-auto d-block"
                             alt="">
                         <div class="partner-info">
-                            <h4><a href="https://mmda.gov.ph/" target="_blank" style="color: white">METROPOLITAN MANILA DEVELOPMENT AUTHORITY</a></h4>
+                            <h4><a href="https://mmda.gov.ph/" target="_blank" style="color: white">METROPOLITAN MANILA
+                                    DEVELOPMENT AUTHORITY</a></h4>
                         </div>
                     </div>
                 </div>
