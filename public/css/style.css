@@ -723,8 +723,9 @@ section {
 .service-content p {
     line-height: 24px;
     font-size: 14px;
+    text-align: justify;
+    text-indent: 50px;
 }
-
 
 /*--------------------------------------------------------------
   # Partners and Clients

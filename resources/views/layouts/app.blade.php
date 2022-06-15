@@ -125,15 +125,13 @@
 
                             <p>
                                 Suite 402, Jade Place Condominium, 33 Visayas Avenue, Bgy. Vasra, QC <br>
-                                <strong>Phone:</strong> (02) 577 4822<br>
-                                <strong>Email:</strong> info@example.com<br>
+                                <strong>Phone:</strong> 0917-5533492 <br>
+                                <strong>Email:</strong> info@cobraitech.com<br>
                             </p>
                             <div class="social-links mt-3">
                                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                                 <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
                                 <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
