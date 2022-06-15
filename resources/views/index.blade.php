@@ -370,13 +370,13 @@
                                     <div class="email">
                                         <i class="bi bi-envelope"></i>
                                         <h4>Email:</h4>
-                                        <p>info@example.com</p>
+                                        <p>info@cobraitech.com</p>
                                     </div>
 
                                     <div class="phone">
                                         <i class="bi bi-phone"></i>
                                         <h4>Call:</h4>
-                                        <p>(02) 577 4822</p>
+                                        <p>0917-5533492</p>
                                     </div>
                                 </div>
 
