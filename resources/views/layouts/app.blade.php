@@ -253,8 +253,8 @@
 
                 },
                 992: {
-                    slidesPerView: 3,
-                    slidesPerGroup: 3
+                    slidesPerView: 2,
+                    slidesPerGroup: 2
                 }
             }
         });

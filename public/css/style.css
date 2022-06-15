@@ -605,7 +605,7 @@ section {
   --------------------------------------------------------------*/
 
 .services .swiper-pagination {
-    margin-top: -25px;
+    margin-top: 20px;
     position: relative;
 }
 
