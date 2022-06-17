@@ -17,7 +17,8 @@
             <div class="first-section-founder">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 d-flex justify-content-center align-items-center">
-                        <img src="{{ asset('assets/img/team/team-1.jpg') }}" alt="" class="img-fluid rounded">
+                        <img src="{{ asset('assets/img/founders-img.JPG') }}" alt="" class="img-fluid rounded"
+                            style="width:800px">
                     </div>
                     <div
                         class="col-sm-12 col-md-12 col-lg-12 col-xl-6 section-bg p-3 mt-sm-4 d-flex justify-content-center align-items-center">
@@ -87,12 +88,7 @@
 
             <div class="second-section-founder mt-5">
                 <div class="row">
-                    <div
-                        class="col-sm-12 col-md-12 col-lg-12 col-xl-6 d-flex justify-content-center align-items-center order-xl-1">
-                        <img src="{{ asset('assets/img/team/team-3.jpg') }}" alt="" class="img-fluid rounded">
-                    </div>
-                    <div
-                        class="col-sm-12 col-md-12 col-lg-12 col-xl-6 section-bg p-3 mt-sm-4 d-flex justify-content-center align-items-center">
+                    <div class="col-sm-12 section-bg p-3 mt-sm-4 d-flex justify-content-center align-items-center">
                         <div class="founder-info">
                             <h4>Craig Richard Covey</h4>
                             <span>Chief Executive Officer</span>
