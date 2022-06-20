@@ -10,8 +10,7 @@
 
             <h4>Partners and Clients</h4>
             <h1>Our Partners</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, sequi repellat dignissimos perferendis
-                libero
+            <p>Empowering partners with proven success to help exceed customers’ specific needs.
             </p>
         </div>
 
@@ -156,10 +155,11 @@
 
                 <div class="col-lg-4 col-md-6 partner-item filter-web">
                     <div class="partner-wrap">
-                        <img src="{{ asset('assets/img/clients-partners/pc-10.web') }}p" class="rounded mx-auto d-block"
-                            alt="">
+                        <img src="{{ asset('assets/img/clients-partners/pc-10.web') }}p"
+                            class="rounded mx-auto d-block" alt="">
                         <div class="partner-info">
-                            <h4><a href="https://www.accenture.com/us-en" target="_blank" style="color: white">ACCENTURE</a>
+                            <h4><a href="https://www.accenture.com/us-en" target="_blank"
+                                    style="color: white">ACCENTURE</a>
                             </h4>
                         </div>
                     </div>
@@ -167,8 +167,8 @@
 
                 <div class="col-lg-4 col-md-6 partner-item filter-web">
                     <div class="partner-wrap">
-                        <img src="{{ asset('assets/img/clients-partners/pc-11.web') }}p" class="rounded mx-auto d-block"
-                            alt="">
+                        <img src="{{ asset('assets/img/clients-partners/pc-11.web') }}p"
+                            class="rounded mx-auto d-block" alt="">
                         <div class="partner-info">
                             <h4><a href="https://www.ibm.com/ph-en" target="_blank" style="color: white">IBM</a></h4>
                         </div>

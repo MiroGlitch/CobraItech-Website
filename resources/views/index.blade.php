@@ -12,9 +12,9 @@
                         <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Cobra Itech Services
                                 Corporation</span>
                         </h2>
-                        <p class="animate__animated animate__fadeInUp">Cobra Itech Services Corporation provides a full range
-                            of IT services,
-                            from computer repair and remote help desk support to programming, to database management, etc.
+                        <p class="animate__animated animate__fadeInUp">Cobra Itech Services Corporation provides a full
+                            range of Information Technology and Business services, from Business Process Analysis and Design
+                            to Software Testing and Quality Assurance Consulting.
                         </p>
                         <a href="#main-page" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
                             More</a>
@@ -32,9 +32,8 @@
             <div class="container divider-caption">
                 <h4>Feature</h4>
                 <h1>Why Choose Us?</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, sequi repellat dignissimos
-                    perferendis
-                    libero
+                <p>By putting our clients at the heart of everything we do, we apply to deliver solutions that meet clients'
+                    needs, expectations, and budgets.
                 </p>
             </div>
 
@@ -47,45 +46,32 @@
                     <div class="col">
                         <div class="card h-100 card-feature-section border-0">
                             <div class="card-body">
-                                <i class="bi bi-briefcase feature-icon"></i>
-                                <h5 class="card-title">Lorem Ipsum</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional
-                                    content. This content is a little bit longer.</p>
+                                <i class="bi bi-person-check feature-icon"></i>
+                                <h5 class="card-title">Client First </h5>
+                                <p class="card-text">For every business, Clients are always at the core. We pay attention to
+                                    our clients to ensure that we deliver and meet their expectations in every aspect of our
+                                    dealings. </p>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card h-100 card-feature-section border-0">
                             <div class="card-body">
-                                <i class="bi bi-card-checklist feature-icon"></i>
-                                <h5 class="card-title">Lorem Ipsum</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional
-                                    content. This content is a little bit longer.</p>
+                                <i class="bi bi-star feature-icon"></i>
+                                <h5 class="card-title">Innovative Approach</h5>
+                                <p class="card-text">We are a group of thinkers, creators, and dreamers. Our services are
+                                    always evolving to meet even greater standards.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card h-100 card-feature-section border-0">
                             <div class="card-body">
-                                <i class="bi bi-bar-chart feature-icon"></i>
-                                <h5 class="card-title">Lorem Ipsum</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional
-                                    content. This content is a little bit longer.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 card-feature-section border-0">
-                            <div class="card-body">
-                                <i class="bi bi-binoculars feature-icon"></i>
-                                <h5 class="card-title">Lorem Ipsum</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional
-                                    content. This content is a little bit longer.</p>
+                                <i class="bi bi-gear feature-icon"></i>
+                                <h5 class="card-title">Process Oriented</h5>
+                                <p class="card-text">We are a process-oriented organization. This ensures prompt and
+                                    high-quality delivery from simple help desk tasks to complex multi-vendor projects with
+                                    strict timeframes.</p>
                             </div>
                         </div>
                     </div>
@@ -93,11 +79,12 @@
                     <div class="col">
                         <div class="card h-100 card-feature-section border-0">
                             <div class="card-body">
-                                <i class="bi bi-brightness-high feature-icon"></i>
-                                <h5 class="card-title">Lorem Ipsum</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional
-                                    content. This content is a little bit longer.</p>
+                                <i class="bi bi-lightbulb feature-icon"></i>
+                                <h5 class="card-title">Creating Ideas with Passion </h5>
+                                <p class="card-text">We provide uncomplicated business intelligence by bringing fresh ideas
+                                    to the table every time with our expertise. The objective behind all of our ideas is
+                                    client success and satisfaction at any time, anywhere.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -105,11 +92,23 @@
                     <div class="col">
                         <div class="card h-100 card-feature-section border-0">
                             <div class="card-body">
-                                <i class="bi bi-calendar4-week feature-icon"></i>
-                                <h5 class="card-title">Lorem Ipsum</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional
-                                    content. This content is a little bit longer.</p>
+                                <i class="bi bi-building feature-icon"></i>
+                                <h5 class="card-title">Strong Partnerships </h5>
+                                <p class="card-text">We've formed excellent business relationships with some of the world's
+                                    most prestigious companies. This allows us to provide our most crucial partners: our
+                                    clients, with industry-leading solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 card-feature-section border-0">
+                            <div class="card-body">
+                                <i class="bi bi-shield-check feature-icon"></i>
+                                <h5 class="card-title">Honesty and Integrity </h5>
+                                <p class="card-text">The business honesty and integrity with which we deal with clients and
+                                    partners is the cornerstone of our success. We believe that what sets us apart from the
+                                    competition is our transparency with our clients.</p>
                             </div>
                         </div>
                     </div>
@@ -179,7 +178,8 @@
         <section id="about-us-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12 col-md-6"><img src="assets/img/about-us-img.jpg" alt="" class="img-fluid rounded">
+                    <div class="col-sm-12 col-md-6"><img src="assets/img/about-us-img.jpg" alt=""
+                            class="img-fluid rounded">
                     </div>
                     <div class="col-sm-12 col-md-6 d-flex justify-content-center align-items-center">
                         <div
@@ -340,7 +340,7 @@
         <section id="contact" class="contact">
             <div class="container divider-caption d-flex justify-content-center align-items-center flex-column">
                 <h4>Get in Touch</h4>
-                <h1>Send us a message</h1>
+                <h1 class="text-center">Send us a message</h1>
             </div>
 
             <div class="container">

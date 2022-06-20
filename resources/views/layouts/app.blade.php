@@ -11,7 +11,7 @@
     <!--<title>{{ config('app.name', 'Laravel') }}</title>-->
     <title>@yield('title') - COBRA ITECH SERVICES CORPORATION</title>
     <meta content="" name="description">
-    <meta content="" name="keywords">
+    <meta content="Cobra Itech Services Corporation, Cobra Itech" name="keywords">
 
     <!-- Favicons -->
     <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
@@ -146,8 +146,10 @@
                             </li>
                             <li><i class="bx bx-chevron-right"></i> <a href="{{ route('partners') }}">Partners &
                                     Clients</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('careers') }}">Careers</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('support') }}">Support</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('careers') }}">Careers</a>
+                            </li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('support') }}">Support</a>
+                            </li>
                         </ul>
                     </div>
 

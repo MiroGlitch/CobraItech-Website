@@ -24,7 +24,7 @@
                         class="col-sm-12 col-md-12 col-lg-12 col-xl-6 section-bg p-3 mt-sm-4 d-flex justify-content-center align-items-center">
                         <div class="founder-info">
                             <h4>Lemuel Rodolfo Braña</h4>
-                            <span>Chief Executive Officer</span>
+                            <span>Founder, CEO, and Chief Consultant</span>
                             <p>Dr. Lemuel Rodolfo Braña has more than 25 years of combined experience in various
                                 industries such as
                                 Finance, Banking, Marketing, E-Commerce, Manufacturing and Information Technology

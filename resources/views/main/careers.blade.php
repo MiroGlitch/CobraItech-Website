@@ -10,8 +10,7 @@
 
             <h4>Careers</h4>
             <h1>Join our Team</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, sequi repellat dignissimos perferendis
-                libero
+            <p>Be the architects of our success. Join us and let’s make an impact together.
             </p>
         </div>
         <div class="container">
@@ -20,11 +19,12 @@
                     <div class="card shadow-sm bg-body rounded border-0">
                         <div class="card-body">
                             @if ($message = Session::get('success'))
-                            <div class="alert alert-success alert-block">	
-                                <strong>{{ $message }}</strong>
-                            </div>
+                                <div class="alert alert-success alert-block">
+                                    <strong>{{ $message }}</strong>
+                                </div>
                             @endif
-                            <form action="{{route('send.career')}}" method="post" role="form" class="php-email-form" enctype="multipart/form-data">
+                            <form action="{{ route('send.career') }}" method="post" role="form" class="php-email-form"
+                                enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-6 form-group">
@@ -54,7 +54,8 @@
                                 </div>
                                 <div class="form-group mt-3">
                                     <label for="formFile" class="form-label" style="font-weight: bold">Resume/CV</label>
-                                    <input class="form-control" type="file" name="cv" id="fileCV" onchange="fileValidation()">
+                                    <input class="form-control" type="file" name="cv" id="fileCV"
+                                        onchange="fileValidation()">
                                 </div>
                                 <div><br></div>
                                 <div class="d-grid gap-2 col-6 mx-auto">
