@@ -850,6 +850,23 @@ section {
     opacity: 1;
 }
 
+.certification-content h5,
+.certification-content h5 a {
+    color: #556270;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.certification-content h5:hover {
+    color: #12519E;
+}
+
+.certification-content h5 a:hover {
+    color: #12519E;
+    text-decoration: underline;
+}
+
 /*--------------------------------------------------------------
   # Founders Page
   --------------------------------------------------------------*/

@@ -167,6 +167,67 @@
                                     src="{{ asset('assets/img/clients-partners/pc-13.webp') }}" class="img-fluid"
                                     alt=""></a>
                         </div>
+
+                        <div class="swiper-slide"><a href="https://www.feu.edu.ph/" target="_blank"><img
+                                    src="{{ asset('assets/img/clients-partners/pc-14.png') }}" class="img-fluid"
+                                    alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a href="https://sscrmnl.edu.ph/" target="_blank"><img
+                                    src="{{ asset('assets/img/clients-partners/pc-15.png') }}" class="img-fluid"
+                                    alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a href="https://www.sanbeda.edu.ph/" target="_blank"><img
+                                    src="{{ asset('assets/img/clients-partners/pc-16.png') }}" class="img-fluid"
+                                    alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a href="https://www.octaresearch.com/" target="_blank"><img
+                                    src="{{ asset('assets/img/clients-partners/pc-17.png') }}" class="img-fluid"
+                                    alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a href="http://www.ebizolution.com/" target="_blank"><img
+                                    src="{{ asset('assets/img/clients-partners/pc-18.jpg') }}" class="img-fluid"
+                                    alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a href="https://sscgi.com/home" target="_blank"><img
+                                    src="{{ asset('assets/img/clients-partners/pc-19.png') }}" class="img-fluid"
+                                    alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a href="https://www.hira.or.kr/eng/main.do" target="_blank"><img
+                                    src="{{ asset('assets/img/clients-partners/pc-20.jpg') }}" class="img-fluid"
+                                    alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a href="https://www.agiaph.org/" target="_blank"><img
+                                    src="{{ asset('assets/img/clients-partners/pc-21.png') }}" class="img-fluid"
+                                    alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a href="https://customs.gov.ph/" target="_blank"><img
+                                    src="{{ asset('assets/img/clients-partners/pc-22.png') }}" class="img-fluid"
+                                    alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a href="https://www.doj.gov.ph/index.html" target="_blank"><img
+                                    src="{{ asset('assets/img/clients-partners/pc-23.png') }}" class="img-fluid"
+                                    alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a href="https://www.philhealth.gov.ph/" target="_blank"><img
+                                    src="{{ asset('assets/img/clients-partners/pc-24.png') }}" class="img-fluid"
+                                    alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a href="http://www.certezainfosys.com/" target="_blank"><img
+                                    src="{{ asset('assets/img/clients-partners/pc-25.png') }}" class="img-fluid"
+                                    alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a href="https://www.kccp.ph/" target="_blank"><img
+                                    src="{{ asset('assets/img/clients-partners/pc-26.png') }}" class="img-fluid"
+                                    alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a href="http://www.eccp.com/" target="_blank"><img
+                                    src="{{ asset('assets/img/clients-partners/pc-27.png') }}" class="img-fluid"
+                                    alt=""></a>
+                        </div>
+                        <div class="swiper-slide"><a href="https://panxenia.com/" target="_blank"><img
+                                    src="{{ asset('assets/img/clients-partners/pc-28.png') }}" class="img-fluid"
+                                    alt=""></a>
+                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
