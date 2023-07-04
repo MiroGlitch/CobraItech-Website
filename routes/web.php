@@ -8,6 +8,7 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\CustomForgotPasswordController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,7 @@ Route::get('/', function () {
 Route::get('/company', [PageDirectory::class, 'companyPage'])->name('company');
 Route::get('/founders', [PageDirectory::class, 'foundersPage'])->name('founders');
 Route::get('/services', [PageDirectory::class, 'servicesPage'])->name('services');
+Route::get('/products', [PageDirectory::class, 'productsPage'])->name('products');
 Route::get('/partners', [PageDirectory::class, 'partnersPage'])->name('partners');
 Route::get('/careers', [PageDirectory::class, 'careersPage'])->name('careers');
 Route::get('/support', [PageDirectory::class, 'supportPage'])->name('support');

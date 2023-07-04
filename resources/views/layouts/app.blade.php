@@ -70,10 +70,16 @@
                                     class="{{ Route::is('') ? 'active' : '' }}">Founders</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="{{ route('services') }}"
-                            class="{{ Route::is('services') ? 'active' : '' }}">Services</a>
+
+                    <li class="dropdown"><a href="{{ route('services') }}"
+                        class="{{ Route::is('services') ? 'active' : '' }}"><span>Services
+                            </span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="{{ route('products') }}"
+                                class="{{ Route::is('') ? 'active' : '' }}">Products</a></li>
+                        </ul>
                     </li>
+
                     <li>
                         <a href="{{ route('partners') }}"
                             class="{{ Route::is('partners') ? 'active' : '' }}">Partners &
